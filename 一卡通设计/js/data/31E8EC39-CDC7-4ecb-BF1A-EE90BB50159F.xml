@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("7.3:1", "", "C：用户界面", "EARoot/EA7/EA3/EA184.htm", "188.png", "10", "0", "", "Custom diagram");
+tocTab[tocTab.length] = new Array("7.3.1", "1", "010：卡务中心", "EARoot/EA7/EA3/EA186.htm", "4.png", "", "", "{48A06E24-28F1-4b5e-8616-1E6D2D75C24E}", "Package");
+tocTab[tocTab.length] = new Array("7.3.2", "1", "020：停车场维护", "EARoot/EA7/EA3/EA187.htm", "4.png", "", "", "{841B5642-E2A5-4d47-AD1A-C32FD844DCF6}", "Package");
+tocTab[tocTab.length] = new Array("7.3.3", "1", "030：停车场监控", "EARoot/EA7/EA3/EA188.htm", "4.png", "", "", "{737E17F1-8CD3-4406-A7D3-67F579419B86}", "Package");
+tocTab[tocTab.length] = new Array("7.3.4", "", "040：通讯协议", "EARoot/EA7/EA3/EA189.htm", "4.png", "", "", "{85F080C6-A222-4b0c-8597-E7A3D44704E1}", "Package");
+tocTab[tocTab.length] = new Array("7.3.5", "1", "050：门禁系统", "EARoot/EA7/EA3/EA190.htm", "4.png", "", "", "{329C85F5-CCC2-400e-80CA-975D8EB45758}", "Package");
+tocTab[tocTab.length] = new Array("7.3.6", "1", "060：考勤系统", "EARoot/EA7/EA3/EA191.htm", "4.png", "", "", "{858D98A9-FAA2-4ac5-AC1F-5A81EB1A10CB}", "Package");
+tocTab[tocTab.length] = new Array("7.3.7", "1", "070：消费系统", "EARoot/EA7/EA3/EA192.htm", "4.png", "", "", "{1B7F0AD6-ACE9-46e8-AE76-CAC879B1E4EA}", "Package");

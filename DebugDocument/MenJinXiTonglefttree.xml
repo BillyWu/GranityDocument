@@ -1,0 +1,212 @@
+
+<rightsql>
+  <ID>bdd63986-1e62-483c-8bc1-fe34c730a342</ID> 
+  <PID>2e63d307-1480-426c-8a9c-87a314526985</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=基本资料,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>基本资料</name> 
+  <text>基本资料</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <scope /> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>170</serial> 
+  <level>3</level> 
+</rightsql>
+
+	<rightsql>
+	  <ID>ce46dd49-7eb9-46e0-90e8-327c821acd34</ID> 
+	  <PID>bdd63986-1e62-483c-8bc1-fe34c730a342</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=设备资料,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>设备资料</name> 
+	  <text>设备资料</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>209</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>020f9298-c790-4e46-b7ce-99407a741c60</ID> 
+	  <PID>bdd63986-1e62-483c-8bc1-fe34c730a342</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=有效时段,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>有效时段</name> 
+	  <text>有效时段</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>210</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	 <rightsql>
+	  <ID>aec42d2d-12c5-4491-91cf-a206bcab6efd</ID> 
+	  <PID>bdd63986-1e62-483c-8bc1-fe34c730a342</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=门禁权限,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>门禁权限</name> 
+	  <text>门禁权限</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>212</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>7d5f4cfd-f054-45a6-b484-a7df2c347b49</ID> 
+	  <PID>bdd63986-1e62-483c-8bc1-fe34c730a342</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=用户权限,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>用户权限</name> 
+	  <text>用户权限</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>213</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+
+<rightsql>
+  <ID>de122f0c-2eff-4bbf-8c21-f62fed36bc02</ID> 
+  <PID>2e63d307-1480-426c-8a9c-87a314526985</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=门禁查询,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>门禁查询</name> 
+  <text>门禁查询</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <scope /> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>185</serial> 
+  <level>3</level> 
+</rightsql>
+
+	<rightsql>
+	  <ID>37acf0a1-7c30-4793-be3f-01bc2bc71905</ID> 
+	  <PID>de122f0c-2eff-4bbf-8c21-f62fed36bc02</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=门禁开门记录,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>门禁开门记录</name> 
+	  <text>门禁开门记录</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>215</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>03d91bc2-3c81-49dd-b748-7c8a859ee3ec</ID> 
+	  <PID>de122f0c-2eff-4bbf-8c21-f62fed36bc02</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=权限查询,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>权限查询</name> 
+	  <text>门禁权限查询</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <scope /> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>803</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>61bb063f-047b-4f1b-904e-7fec3c87a31e</ID> 
+	  <PID>de122f0c-2eff-4bbf-8c21-f62fed36bc02</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=删除名单查询,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>删除名单查询</name> 
+	  <text>删除名单查询</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <scope /> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>944</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+
+<rightsql>
+  <ID>da49fb1c-425a-4555-be34-adbdba237bec</ID> 
+  <PID>2e63d307-1480-426c-8a9c-87a314526985</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=门禁管理,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>门禁管理</name> 
+  <text>门禁管理</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <scope /> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>209</serial> 
+  <level>3</level> 
+</rightsql>
+
+	<rightsql>
+	  <ID>dcfb4b99-ce88-42b1-853d-c01d4db74763</ID> 
+	  <PID>da49fb1c-425a-4555-be34-adbdba237bec</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=门禁管理,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>门禁管理</name> 
+	  <text>门禁管理</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>217</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>c7298635-a3e4-44ab-8eb9-ae6366670249</ID> 
+	  <PID>da49fb1c-425a-4555-be34-adbdba237bec</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=门禁监控,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>门禁监控</name> 
+	  <text>门禁监控</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>218</serial> 
+	  <level>4</level> 
+	</rightsql>
+

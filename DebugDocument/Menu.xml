@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<level1>
+	<level2 name="系统配置">
+		<level3 name="组织机构" html="orggroup.htm">
+		</level3>
+		<level3 name="数据源设计" html="dataitemHTM.htm">
+		</level3>
+		<level3 name="查询设计" html="QueryDesigner.htm">
+		</level3>
+		<level3 name="菜单分配" html="assign.htm">
+		</level3>
+		<level3 name="菜单分组" html="options.htm">
+		</level3>
+		<level3 name="权限定义" html="rights.htm">
+		</level3>
+		<level3 name="数据库配置" html="dbset.htm">
+		</level3>
+		<level3 name="菜单设计" html="unititemsHTM.htm">
+		</level3>
+		<level3 name="系统配置表" html="syssetup.htm">
+		</level3>
+		<level3 name="卡片参数设置" html="">
+		</level3>
+		<level3 name="工作日志" html="workpad.htm">
+		</level3>
+	</level2>
+	<level2 name="用户管理">
+		<level3 name="用户管理">
+			<level4 name="用户信息" html="UserInfo.htm">
+			</level4>
+			<level4 name="公司员工" html="employee.htm">
+			</level4>
+			<level4 name="角色定义" html="role.htm">
+			</level4>
+			<level4 name="员工信息导入" html="frGuideDate.aspx">
+			</level4>
+			<level4 name="修改密码" html="password.htm">
+			</level4>
+			<level4 name="员工信息查询" html="UserInfo.htm">
+			</level4>
+		</level3>
+	</level2>	
+	<level2 name="卡务中心">
+		<level3 name="卡务中心">
+			<level4 name="发行管理" html="发行管理.htm">
+			</level4>
+			<level4 name="卡片管理" html="卡片管理.htm">
+			</level4>
+			<level4 name="发行器设置" html="cardpubset.htm">
+			</level4>
+			<level4 name="黑名单设置" html="cardWhiteBlack.htm">
+			</level4>
+		</level3>
+		<level3 name="查询管理">
+			<level4 name="卡片发行记录" html="卡片发行记录.htm">
+			</level4>
+			<level4 name="卡片挂失解挂记录" html="卡片挂失解挂记录.htm">
+			</level4>
+			<level4 name="卡片充值记录" html="卡片充值记录.htm">
+			</level4>
+			<level4 name="卡片延期记录" html="卡片延期记录.htm">
+			</level4>
+			<level4 name="退卡记录" html="退卡记录.htm">
+			</level4>
+			<level4 name="补助记录" html="卡片补助记录.htm">
+			</level4>		
+		</level3>
+	</level2>
+
+	<level2 name="门禁系统">
+		<level3 name="基本资料">
+			<level4 name="设备资料" html="DoorManager.htm">
+			</level4>
+			<level4 name="有效时段" html="DoorTime.htm">
+			</level4>
+			<level4 name="门禁权限" html="DoorRight.htm">
+			</level4>
+			<level4 name="用户权限" html="DoorRight2.htm">
+			</level4>
+		</level3>
+		<level3 name="门禁查询">
+			<level4 name="门禁开门记录" html="DoorOpenRpt.htm">
+			</level4>
+			<level4 name="门禁权限查询" html="doorRightQuery.htm">
+			</level4>
+			<level4 name="删除名单查询" html="doorDeleteList.htm">
+			</level4>
+		</level3>
+		<level3 name="门禁管理">
+			<level4 name="门禁管理" html="DoorParam.htm">
+			</level4>
+			<level4 name="门禁监控" html="DoorMonitor.htm">
+			</level4>
+		</level3>
+	</level2>
+	<level2 name="停车场">
+		<level3 name="基本资料">
+			<level4 name="停车场管理" html="ParkManager.htm">
+			</level4>
+			<level4 name="收费标准" html="ParkMoney.htm">
+			</level4>
+			<level4 name="停车场权限" html="ParkRight.htm">
+			</level4>
+			<level4 name="停车场用户权限" html="ParkUserRight.htm">
+			</level4>
+			<level4 name="时段设置" html="parkTime.htm">
+			</level4>
+			<level4 name="屏显语音" html="ParkScress.htm">
+			</level4>
+		</level3>
+		<level3 name="查询管理">
+			<level4 name="入场记录和图像" html="parkInCountRpt.htm">
+			</level4>
+			<level4 name="场内停车记录" html="parkParking.htm">
+			</level4>
+			<level4 name="出场记录和图像" html="parkOutCountRpt.htm">
+			</level4>
+			<level4 name="操作员交接班记录" html="parkOperator.htm">
+			</level4>
+			<level4 name="远程开闸记录" html="parkkaizhaRpt.htm">
+			</level4>
+		</level3>
+		<level3 name="报表管理">
+			<level4 name="入场车流量统计" html="parkInsumRpt.htm">
+			</level4>
+			<level4 name="出场车流量统计" html="parkOutsumRpt.htm">
+			</level4>
+			<level4 name="停车场收费统计" html="parkSumRpt.htm">
+			</level4>
+			<level4 name="收费员收费统计" html="parkOperSumRpt.htm">
+			</level4>
+		</level3>
+	</level2>
+	<level2 name="考勤系统">
+		<level3 name="查询管理">
+			<level4 name="加班汇总" html="kqAddWorkRpt.htm">
+			</level4>
+			<level4 name="调休汇总" html="kqTiaoXiuRpt.htm">
+			</level4>
+			<level4 name="员工排班查询" html="kqEmpScheduleRpt.htm">
+			</level4>
+			<level4 name="部门排班查询" html="kqDeptScheduleRpt.htm">
+			</level4>
+			<level4 name="员工打卡查询" html="kqHitCardRpt.htm">
+			</level4>
+			<level4 name="考勤明细查询" html="kqCheckWorkListRpt.htm">
+			</level4>
+			<level4 name="考勤汇总（周报）" html="KqWeekRpt.htm">
+			</level4>
+			<level4 name="考勤汇总（月报）" html="KqMonthRpt.htm">
+			</level4>
+			<level4 name="迟到早退汇总" html="kqLateandLevaRpt.htm">
+			</level4>
+			<level4 name="考勤异常统计" html="kqBuggerRpt.htm">
+			</level4>
+		</level3>
+		<level3 name="班制定义">
+			<level4 name="班制定义" html="kqClassSet.htm">
+			</level4>
+			<level4 name="部门班制设置" html="kqDetpClass.htm">
+			</level4>
+			<level4 name="法定假日维护" html="kqHolidaySet.htm">
+			</level4>
+			<level4 name="班次维护" html="KqWorkRuleSet.htm">
+			</level4>
+		</level3>
+		<level3 name="部门排班">
+			<level4 name="部门排班" html="kqMakeClass.htm">
+			</level4>
+			<level4 name="生成考勤" html="kqMakeCount.htm">
+			</level4>
+			<level4 name="员工排班导入" html="kqEmpClassMake.aspx">
+			</level4>
+		</level3>
+		<level3 name="员工考勤管理">
+			<level4 name="员工考勤管理" html="kqEmpWook.htm">
+			</level4>
+			<level4 name="考勤信息导入" html="kqCheckEcl.aspx">
+			</level4>
+		</level3>
+	</level2>
+	<level2 name="消费系统">
+		<level3 name="基本资料">
+			<level4 name="餐厅维护" html="eateryDevice.htm">
+			</level4>
+			<level4 name="现金收入登记" html="EateryCashRegister.htm">
+			</level4>
+			<level4 name="补助管理" html="EateryAddReduceMoney.htm">
+			</level4>
+			<level4 name="消费限次导入" html="EateryLimitImp.aspx">
+			</level4>
+		</level3>
+		<level3 name="营业查询">
+			<level4 name="消费查询" html="EateryConsumeRecord.htm">
+			</level4>
+			<level4 name="餐厅总收入" html="EateryDinMacRpt.htm">
+			</level4>
+			<level4 name="部门消费汇总" html="EateryCosumeDeptRpt.htm">
+			</level4>
+			<level4 name="员工消费汇总" html="EateryCosumeEmployRpt.htm">
+			</level4>
+			<level4 name="消费限次汇总" html="EateryLimite.htm">
+			</level4>
+			<level4 name="现金收入汇总" html="EateryCashSumRpt.htm">
+			</level4>
+			<level4 name="消费机收入汇总" html="EateryCosumeMacRpt.htm">
+			</level4>
+			<level4 name="补助充值退款查询" html="EateryAddReduceMoneyRpt.htm">
+			</level4>
+		</level3>
+		<level3 name="消费机管理">
+			<level4 name="消费机管理" html="EateryParam.htm">
+			</level4>
+			<level4 name="消费监控" html="EateryMonitor.htm">
+			</level4>
+		</level3>
+	</level2>
+	<level2 name="通道闸系统">
+		<level3 name="基本资料">
+			<level4 name="设备维护" html="ChannelManager.htm">
+			</level4>
+			<level4 name="通道权限" html="ChannelRight.htm">
+			</level4>
+			<level4 name="通道用户权限" html="ChannelUserRight.htm">
+			</level4>
+		</level3>
+		<level3 name="区域员工进出查询">
+			<level4 name="区域员工动态" html="channelEmpDynamic.htm">
+			</level4>
+			<level4 name="区域员工进场" html="channelEmpIn.htm">
+			</level4>
+			<level4 name="区域员工出场" html="channelEmpOut.htm">
+			</level4>
+			<level4 name="区域权限查询" html="channelEmpRight.htm">
+			</level4>
+		</level3>
+		<level3 name="通道管理">
+			<level4 name="通道设备管理" html="ChannelParam.htm">
+			</level4>
+			<level4 name="通道监控" html="ChannelMonitor.htm">
+			</level4>
+			<level4 name="科室员工动态" html="ChannelEmployMonitor.htm">
+			</level4>
+			<level4 name="本科室员工动态" html="ChannelEmployMonitor2.htm">
+			</level4>
+			<level4 name="工作区监控" html="ChannelRegionMonitor.htm">
+			</level4>
+			<level4 name="更衣室工作区监控" html="ChannelRegionRoom.htm">
+			</level4>
+		</level3>
+	</level2>
+</level1>

@@ -1,0 +1,60 @@
+<XML id="xmlparam" typexml="Param">
+	<D>
+		<PL t="P">
+			<L t="Ts">
+				<P n="RecordCount" v="" t="s" pt="M"/>
+				<P n="Command" v="TransParam" t="s"/>
+				<P n="UnitName" v="有效时段" t="s"/>
+			</L>
+		</PL>
+	</D>
+</XML>
+
+<XML name="有效时段" templatetype="HTML" id="xmlConf_xmlLandConf" typexml="ConfProperty" confpro="" tpath="DoorTime.htm" DataSrcFile="有效时段" DictColSrcFile="">
+	<UnitItem>
+		<Item name="有效时段" relation="M" dataitem="有效时段" columnkey="ID">
+		</Item>
+	</UnitItem>
+</XML>
+
+<XML id="有效时段Tab_Sum" typexml="Count" itemname="有效时段">
+	<DataSet>
+		<DataTableCount>
+			<TotalPage>1</TotalPage>
+			<PageIndex>1</PageIndex>
+			<PageSize>10</PageSize>
+			<RecordCount>1</RecordCount>
+		</DataTableCount>
+	</DataSet>
+</XML>
+
+<XML id="有效时段Tab_Delete" typexml="Delete" itemname="有效时段">
+	<etpTemplate_有效时段Tab_xmlland>
+	</etpTemplate_有效时段Tab_xmlland>
+</XML>
+<XML id="有效时段Tab_dict" typexml="Dict" itemname="有效时段">
+</XML>
+<XML id="有效时段Tab" typexml="Data" itemname="有效时段">
+</XML>
+<XML id="有效时段Tab_Schema" typexml="Schema" ctrlAlert="" ctrlchanged="etpTemplate_有效时段Tab_hlbChanged" ctrlschema="etpTemplate_有效时段Tab_hlbWidth" ctrlstate="etpTemplate_有效时段Tab_hlbState" ctrlhlbcmd="etpTemplate_有效时段Tab_hlb_cmd" ctrlbtcommand="bt_PostBack" name="有效时段" relation="M" columnkey="ID">
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string"  visible="1" evisible="1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"  />
+		<xs:element name="编号" type="xs:string"  visible="1" evisible="1"  />
+		<xs:element name="时段号" type="xs:int"  validity="时段号&gt;1" alertexpr="时段号必须大于2" expression="时段号[-1]"  />
+		<xs:element name="名称" type="xs:string"   />
+		<xs:element name="星期一" type="xs:boolean"   />
+		<xs:element name="星期二" type="xs:boolean"   />
+		<xs:element name="星期三" type="xs:boolean"   />
+		<xs:element name="星期四" type="xs:boolean"   />
+		<xs:element name="星期五" type="xs:boolean"   />
+		<xs:element name="星期六" type="xs:boolean"   />
+		<xs:element name="星期日" type="xs:boolean"   />
+		<xs:element name="开始时间1" type="xs:string"  datastyle="time"  />
+		<xs:element name="结束时间1" type="xs:string"  validity="结束时间1&gt;=开始时间1" alertexpr="结束时间不能小于考试时间!" expression="结束时间1[-1]" datastyle="time"  />
+		<xs:element name="开始时间2" type="xs:string"  datastyle="time"  />
+		<xs:element name="结束时间2" type="xs:string"  validity="结束时间2&gt;=开始时间2" alertexpr="结束时间不能小于开始时间" expression="结束时间2[-1]" datastyle="time"  />
+		<xs:element name="开始时间3" type="xs:string"  datastyle="time"  />
+		<xs:element name="结束时间3" type="xs:string"  validity="结束时间3&gt;=开始时间3" alertexpr="结束时间不能小于开始时间" expression="结束时间3[-1]" datastyle="time"  />
+		<xs:element name="RowNum" type="xs:int"  visible="1"  />
+	</xs:schema>
+</XML>

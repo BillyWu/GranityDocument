@@ -1,0 +1,1829 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Granity.communications::CommiTarget</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">CommiTarget  : public   class</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">2012-5-15 11:32:35</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">2012-5-15 11:32:35</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Administrator</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{98984B22-7E27-4282-B19D-4681BC9FC849}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA28.htm">Granity.communications</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">通讯参数<br /><br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('Operations');" id="OperationsTitle">Operations</li>
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="40%" class="TableHeading">Attribute</td>
+			<td width="60%" class="TableHeading">Details</td>
+		</tr>
+						<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private <a href="EA37.htm">CommiType</a></i><br /><strong>&nbsp;&nbsp;protocolType</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> CommiType.UDP<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private IPEndPoint</i><br /><strong>&nbsp;&nbsp;srvEndPoint</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> null<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private string</i><br /><strong>&nbsp;&nbsp;portName</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> ""<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private int</i><br /><strong>&nbsp;&nbsp;baudRate</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> 9600<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private Parity</i><br /><strong>&nbsp;&nbsp;parity</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> Parity.None<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private int</i><br /><strong>&nbsp;&nbsp;dataBits</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> 8<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private StopBits</i><br /><strong>&nbsp;&nbsp;stopBits</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> StopBits.One<br></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private <a href="EA44.htm">Protocol</a></i><br /><strong>&nbsp;&nbsp;ptl</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new Protocol()<br></i>&nbsp;</td>
+			</tr>
+		</table>
+</div><div class="ItemBody" id="OperationsTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="40%" class="TableHeading">Operation</td>
+			<td width="60%" class="TableHeading">Details</td>
+		</tr>
+						<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ProtocolType</strong>():<a href="EA37.htm">CommiType</a>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;property&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>readonly=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			读取当前通讯的类型
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiTarget</strong>():
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			构建默认参数,协议参数为空,默认UDP通讯
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiTarget</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{5CE49699-A060-417f-87D3-D4EE1B78BC77}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5CE49699-A060-417f-87D3-D4EE1B78BC77}" border="0" />ep: IPEndPoint</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5CE49699-A060-417f-87D3-D4EE1B78BC77}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5CE49699-A060-417f-87D3-D4EE1B78BC77}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5CE49699-A060-417f-87D3-D4EE1B78BC77}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5CE49699-A060-417f-87D3-D4EE1B78BC77}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯另一端IP地址和端口号</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{BADBD028-3E15-4772-B5E8-C181E9F3027E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{BADBD028-3E15-4772-B5E8-C181E9F3027E}" border="0" />ptype: <a href="EA37.htm">CommiType</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{BADBD028-3E15-4772-B5E8-C181E9F3027E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BADBD028-3E15-4772-B5E8-C181E9F3027E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{BADBD028-3E15-4772-B5E8-C181E9F3027E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BADBD028-3E15-4772-B5E8-C181E9F3027E}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯类别UDP/TCP, 设置SerialPort触发异常</div>
+</td>
+						</tr>
+					</table>
+):
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			构建通讯参数,并以UDP/TCP参数初始值
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiTarget</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{02E5210F-BF1B-485d-A744-C1B8DC8FD123}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{02E5210F-BF1B-485d-A744-C1B8DC8FD123}" border="0" />ipaddress: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{02E5210F-BF1B-485d-A744-C1B8DC8FD123}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{02E5210F-BF1B-485d-A744-C1B8DC8FD123}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{02E5210F-BF1B-485d-A744-C1B8DC8FD123}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{02E5210F-BF1B-485d-A744-C1B8DC8FD123}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">IP地址</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{CCD813D5-D150-4221-BF46-DF75C14C9C99}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{CCD813D5-D150-4221-BF46-DF75C14C9C99}" border="0" />port: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{CCD813D5-D150-4221-BF46-DF75C14C9C99}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CCD813D5-D150-4221-BF46-DF75C14C9C99}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{CCD813D5-D150-4221-BF46-DF75C14C9C99}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CCD813D5-D150-4221-BF46-DF75C14C9C99}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">端口号</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{F65429F0-D5AF-436f-A439-0D512068B71E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{F65429F0-D5AF-436f-A439-0D512068B71E}" border="0" />ptype: <a href="EA37.htm">CommiType</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{F65429F0-D5AF-436f-A439-0D512068B71E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F65429F0-D5AF-436f-A439-0D512068B71E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{F65429F0-D5AF-436f-A439-0D512068B71E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F65429F0-D5AF-436f-A439-0D512068B71E}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">协议类型UDP/TCP, 设置SerialPort触发异常</div>
+</td>
+						</tr>
+					</table>
+):
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			构建通讯参数,并以UDP/TCP参数初始值
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiTarget</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{262970A2-EE1C-4a29-9DCF-434DF934AFC3}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{262970A2-EE1C-4a29-9DCF-434DF934AFC3}" border="0" />portName: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{262970A2-EE1C-4a29-9DCF-434DF934AFC3}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{262970A2-EE1C-4a29-9DCF-434DF934AFC3}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{262970A2-EE1C-4a29-9DCF-434DF934AFC3}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{262970A2-EE1C-4a29-9DCF-434DF934AFC3}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯串口名称</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{38E6A261-7ACF-4d84-804A-8788F4F207C0}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{38E6A261-7ACF-4d84-804A-8788F4F207C0}" border="0" />baudRate: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{38E6A261-7ACF-4d84-804A-8788F4F207C0}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{38E6A261-7ACF-4d84-804A-8788F4F207C0}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{38E6A261-7ACF-4d84-804A-8788F4F207C0}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{38E6A261-7ACF-4d84-804A-8788F4F207C0}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">波特率</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{F8B628FF-E061-477d-BCD5-B88A0D8D3C5B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{F8B628FF-E061-477d-BCD5-B88A0D8D3C5B}" border="0" />parity: Parity</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{F8B628FF-E061-477d-BCD5-B88A0D8D3C5B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F8B628FF-E061-477d-BCD5-B88A0D8D3C5B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{F8B628FF-E061-477d-BCD5-B88A0D8D3C5B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F8B628FF-E061-477d-BCD5-B88A0D8D3C5B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">奇偶校验</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{8C81B724-9133-487b-9AE4-C6237855205C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8C81B724-9133-487b-9AE4-C6237855205C}" border="0" />dataBits: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8C81B724-9133-487b-9AE4-C6237855205C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8C81B724-9133-487b-9AE4-C6237855205C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8C81B724-9133-487b-9AE4-C6237855205C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8C81B724-9133-487b-9AE4-C6237855205C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据位</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{EFADD35A-65B5-43b1-A365-6EFFA7D39631}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{EFADD35A-65B5-43b1-A365-6EFFA7D39631}" border="0" />stopBits: StopBits</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{EFADD35A-65B5-43b1-A365-6EFFA7D39631}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{EFADD35A-65B5-43b1-A365-6EFFA7D39631}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{EFADD35A-65B5-43b1-A365-6EFFA7D39631}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{EFADD35A-65B5-43b1-A365-6EFFA7D39631}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">停止位</div>
+</td>
+						</tr>
+					</table>
+):
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			构建通讯参数,并以串口参数初始值
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiTarget</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{DBB5D59D-84C7-4a83-AF31-DC0D1673AA5A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{DBB5D59D-84C7-4a83-AF31-DC0D1673AA5A}" border="0" />portName: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{DBB5D59D-84C7-4a83-AF31-DC0D1673AA5A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{DBB5D59D-84C7-4a83-AF31-DC0D1673AA5A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{DBB5D59D-84C7-4a83-AF31-DC0D1673AA5A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{DBB5D59D-84C7-4a83-AF31-DC0D1673AA5A}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯串口名称</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{2E23B29B-413E-439e-AA47-A4AAC9F5EA53}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{2E23B29B-413E-439e-AA47-A4AAC9F5EA53}" border="0" />baudRate: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{2E23B29B-413E-439e-AA47-A4AAC9F5EA53}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2E23B29B-413E-439e-AA47-A4AAC9F5EA53}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{2E23B29B-413E-439e-AA47-A4AAC9F5EA53}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2E23B29B-413E-439e-AA47-A4AAC9F5EA53}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">波特率</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{38C70B0E-CD54-4098-866C-111EA059C93F}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{38C70B0E-CD54-4098-866C-111EA059C93F}" border="0" />parity: Parity</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{38C70B0E-CD54-4098-866C-111EA059C93F}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{38C70B0E-CD54-4098-866C-111EA059C93F}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{38C70B0E-CD54-4098-866C-111EA059C93F}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{38C70B0E-CD54-4098-866C-111EA059C93F}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">奇偶校验</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{BB6CB36D-733D-471f-8AF2-04CF444D208F}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{BB6CB36D-733D-471f-8AF2-04CF444D208F}" border="0" />dataBits: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{BB6CB36D-733D-471f-8AF2-04CF444D208F}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BB6CB36D-733D-471f-8AF2-04CF444D208F}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{BB6CB36D-733D-471f-8AF2-04CF444D208F}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BB6CB36D-733D-471f-8AF2-04CF444D208F}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据位</div>
+</td>
+						</tr>
+					</table>
+):
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			构建通讯参数,并以串口参数初始值
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiTarget</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{DDB5DC57-17BC-4cbc-84E6-CF72A2B6598B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{DDB5DC57-17BC-4cbc-84E6-CF72A2B6598B}" border="0" />portName: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{DDB5DC57-17BC-4cbc-84E6-CF72A2B6598B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{DDB5DC57-17BC-4cbc-84E6-CF72A2B6598B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{DDB5DC57-17BC-4cbc-84E6-CF72A2B6598B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{DDB5DC57-17BC-4cbc-84E6-CF72A2B6598B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯串口名称</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{B90C39A3-AF0D-4cb3-8B61-89DC2E11E525}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B90C39A3-AF0D-4cb3-8B61-89DC2E11E525}" border="0" />baudRate: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B90C39A3-AF0D-4cb3-8B61-89DC2E11E525}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B90C39A3-AF0D-4cb3-8B61-89DC2E11E525}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B90C39A3-AF0D-4cb3-8B61-89DC2E11E525}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B90C39A3-AF0D-4cb3-8B61-89DC2E11E525}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">波特率</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{4CD67228-CB24-4b37-8C27-25BDC0C71BFE}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{4CD67228-CB24-4b37-8C27-25BDC0C71BFE}" border="0" />parity: Parity</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4CD67228-CB24-4b37-8C27-25BDC0C71BFE}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4CD67228-CB24-4b37-8C27-25BDC0C71BFE}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{4CD67228-CB24-4b37-8C27-25BDC0C71BFE}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4CD67228-CB24-4b37-8C27-25BDC0C71BFE}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">奇偶校验</div>
+</td>
+						</tr>
+					</table>
+):
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			构建通讯参数,并以串口参数初始值
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiTarget</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{D1C4EB21-9872-4fcb-BFB5-8886841FF5DD}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{D1C4EB21-9872-4fcb-BFB5-8886841FF5DD}" border="0" />portName: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{D1C4EB21-9872-4fcb-BFB5-8886841FF5DD}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D1C4EB21-9872-4fcb-BFB5-8886841FF5DD}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{D1C4EB21-9872-4fcb-BFB5-8886841FF5DD}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D1C4EB21-9872-4fcb-BFB5-8886841FF5DD}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯串口名称</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{87D4DF64-983D-43c2-A423-08AB558B2343}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{87D4DF64-983D-43c2-A423-08AB558B2343}" border="0" />baudRate: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{87D4DF64-983D-43c2-A423-08AB558B2343}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{87D4DF64-983D-43c2-A423-08AB558B2343}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{87D4DF64-983D-43c2-A423-08AB558B2343}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{87D4DF64-983D-43c2-A423-08AB558B2343}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">波特率</div>
+</td>
+						</tr>
+					</table>
+):
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			构建通讯参数,并以串口参数初始值
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiTarget</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{95F6F376-E43E-4fc2-8D53-6C442B7A0B90}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{95F6F376-E43E-4fc2-8D53-6C442B7A0B90}" border="0" />portName: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{95F6F376-E43E-4fc2-8D53-6C442B7A0B90}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{95F6F376-E43E-4fc2-8D53-6C442B7A0B90}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{95F6F376-E43E-4fc2-8D53-6C442B7A0B90}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{95F6F376-E43E-4fc2-8D53-6C442B7A0B90}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯串口名称</div>
+</td>
+						</tr>
+					</table>
+):
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			构建通讯参数,并以串口参数初始值
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SetProtocolParam</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{5ACFB7C5-9D17-4617-9909-9F78F028C4E9}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5ACFB7C5-9D17-4617-9909-9F78F028C4E9}" border="0" />ep: IPEndPoint</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5ACFB7C5-9D17-4617-9909-9F78F028C4E9}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5ACFB7C5-9D17-4617-9909-9F78F028C4E9}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5ACFB7C5-9D17-4617-9909-9F78F028C4E9}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5ACFB7C5-9D17-4617-9909-9F78F028C4E9}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯端点, 包含地址和端口号</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{D26FF33C-6231-4ece-BECB-DEF46088E9C3}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{D26FF33C-6231-4ece-BECB-DEF46088E9C3}" border="0" />ptype: <a href="EA37.htm">CommiType</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{D26FF33C-6231-4ece-BECB-DEF46088E9C3}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D26FF33C-6231-4ece-BECB-DEF46088E9C3}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{D26FF33C-6231-4ece-BECB-DEF46088E9C3}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D26FF33C-6231-4ece-BECB-DEF46088E9C3}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">协议类型</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			设置TCP/UDP通讯端点,类型使用串口触发异常
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SetProtocolParam</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{434007C0-5C6C-4369-ADC7-45AB8128D149}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{434007C0-5C6C-4369-ADC7-45AB8128D149}" border="0" />ipaddress: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{434007C0-5C6C-4369-ADC7-45AB8128D149}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{434007C0-5C6C-4369-ADC7-45AB8128D149}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{434007C0-5C6C-4369-ADC7-45AB8128D149}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{434007C0-5C6C-4369-ADC7-45AB8128D149}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">IP地址</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{005329EF-FA34-4b93-B79B-8F6185A02FF2}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{005329EF-FA34-4b93-B79B-8F6185A02FF2}" border="0" />port: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{005329EF-FA34-4b93-B79B-8F6185A02FF2}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{005329EF-FA34-4b93-B79B-8F6185A02FF2}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{005329EF-FA34-4b93-B79B-8F6185A02FF2}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{005329EF-FA34-4b93-B79B-8F6185A02FF2}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">端口号</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{8E2FD0D5-2578-4764-9F7F-A2F49C2AF38B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8E2FD0D5-2578-4764-9F7F-A2F49C2AF38B}" border="0" />ptype: <a href="EA37.htm">CommiType</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8E2FD0D5-2578-4764-9F7F-A2F49C2AF38B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8E2FD0D5-2578-4764-9F7F-A2F49C2AF38B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8E2FD0D5-2578-4764-9F7F-A2F49C2AF38B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8E2FD0D5-2578-4764-9F7F-A2F49C2AF38B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">协议类型</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			设置TCP/UDP通讯端点,类型使用串口触发异常
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SetProtocolParam</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{CF679DD2-78E8-4933-B4B8-259B015A7AE6}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{CF679DD2-78E8-4933-B4B8-259B015A7AE6}" border="0" />portName: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{CF679DD2-78E8-4933-B4B8-259B015A7AE6}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CF679DD2-78E8-4933-B4B8-259B015A7AE6}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{CF679DD2-78E8-4933-B4B8-259B015A7AE6}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CF679DD2-78E8-4933-B4B8-259B015A7AE6}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">串口名称</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{F625843F-7B27-473e-8F91-F04BD8539064}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{F625843F-7B27-473e-8F91-F04BD8539064}" border="0" />baudRate: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{F625843F-7B27-473e-8F91-F04BD8539064}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F625843F-7B27-473e-8F91-F04BD8539064}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{F625843F-7B27-473e-8F91-F04BD8539064}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F625843F-7B27-473e-8F91-F04BD8539064}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">波特率(默认9600)</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{86BACBE8-B843-4b5d-85BA-8ABA64A79F92}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{86BACBE8-B843-4b5d-85BA-8ABA64A79F92}" border="0" />parity: Parity</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{86BACBE8-B843-4b5d-85BA-8ABA64A79F92}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{86BACBE8-B843-4b5d-85BA-8ABA64A79F92}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{86BACBE8-B843-4b5d-85BA-8ABA64A79F92}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{86BACBE8-B843-4b5d-85BA-8ABA64A79F92}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">奇偶校验位(默认None)</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{4641A963-BCF7-42cd-A3D7-153A87CF6561}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{4641A963-BCF7-42cd-A3D7-153A87CF6561}" border="0" />dataBits: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4641A963-BCF7-42cd-A3D7-153A87CF6561}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4641A963-BCF7-42cd-A3D7-153A87CF6561}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{4641A963-BCF7-42cd-A3D7-153A87CF6561}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4641A963-BCF7-42cd-A3D7-153A87CF6561}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据位(默认8)</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{F785B514-B49A-4299-A8F6-6FFF902FCA56}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{F785B514-B49A-4299-A8F6-6FFF902FCA56}" border="0" />stopBits: StopBits</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{F785B514-B49A-4299-A8F6-6FFF902FCA56}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F785B514-B49A-4299-A8F6-6FFF902FCA56}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{F785B514-B49A-4299-A8F6-6FFF902FCA56}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F785B514-B49A-4299-A8F6-6FFF902FCA56}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">停止位(默认1)</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			设置串口通讯参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SetProtocolParam</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{F4863592-E1E7-4474-848D-F375166AD801}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{F4863592-E1E7-4474-848D-F375166AD801}" border="0" />portName: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{F4863592-E1E7-4474-848D-F375166AD801}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F4863592-E1E7-4474-848D-F375166AD801}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{F4863592-E1E7-4474-848D-F375166AD801}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F4863592-E1E7-4474-848D-F375166AD801}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">串口名称</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{B648FC78-8B87-4e77-935D-A110B891B9FA}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B648FC78-8B87-4e77-935D-A110B891B9FA}" border="0" />baudRate: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B648FC78-8B87-4e77-935D-A110B891B9FA}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B648FC78-8B87-4e77-935D-A110B891B9FA}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B648FC78-8B87-4e77-935D-A110B891B9FA}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B648FC78-8B87-4e77-935D-A110B891B9FA}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">波特率(默认9600)</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{4B5E44C2-3784-4ddf-BE71-7496CCAA46EC}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{4B5E44C2-3784-4ddf-BE71-7496CCAA46EC}" border="0" />parity: Parity</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4B5E44C2-3784-4ddf-BE71-7496CCAA46EC}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4B5E44C2-3784-4ddf-BE71-7496CCAA46EC}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{4B5E44C2-3784-4ddf-BE71-7496CCAA46EC}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4B5E44C2-3784-4ddf-BE71-7496CCAA46EC}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">奇偶校验位(默认None)</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{3351E5D9-7AB7-4914-973F-99B70CA05CF7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{3351E5D9-7AB7-4914-973F-99B70CA05CF7}" border="0" />dataBits: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{3351E5D9-7AB7-4914-973F-99B70CA05CF7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{3351E5D9-7AB7-4914-973F-99B70CA05CF7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{3351E5D9-7AB7-4914-973F-99B70CA05CF7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{3351E5D9-7AB7-4914-973F-99B70CA05CF7}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据位(默认8)</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			设置串口通讯参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SetProtocolParam</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{AF7A5E72-44BC-4bb7-A96C-8E57C0F41148}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{AF7A5E72-44BC-4bb7-A96C-8E57C0F41148}" border="0" />portName: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{AF7A5E72-44BC-4bb7-A96C-8E57C0F41148}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AF7A5E72-44BC-4bb7-A96C-8E57C0F41148}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{AF7A5E72-44BC-4bb7-A96C-8E57C0F41148}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AF7A5E72-44BC-4bb7-A96C-8E57C0F41148}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">串口名称</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{7B98B842-7632-4760-8353-99E68F7E4293}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{7B98B842-7632-4760-8353-99E68F7E4293}" border="0" />baudRate: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{7B98B842-7632-4760-8353-99E68F7E4293}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7B98B842-7632-4760-8353-99E68F7E4293}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{7B98B842-7632-4760-8353-99E68F7E4293}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7B98B842-7632-4760-8353-99E68F7E4293}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">波特率(默认9600)</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{B998079B-EA30-4194-B911-A417D327847C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B998079B-EA30-4194-B911-A417D327847C}" border="0" />parity: Parity</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B998079B-EA30-4194-B911-A417D327847C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B998079B-EA30-4194-B911-A417D327847C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B998079B-EA30-4194-B911-A417D327847C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B998079B-EA30-4194-B911-A417D327847C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">奇偶校验位(默认None)</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			设置串口通讯参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SetProtocolParam</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{92CDB6F1-5E58-46d5-B725-248385AF9658}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{92CDB6F1-5E58-46d5-B725-248385AF9658}" border="0" />portName: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{92CDB6F1-5E58-46d5-B725-248385AF9658}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{92CDB6F1-5E58-46d5-B725-248385AF9658}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{92CDB6F1-5E58-46d5-B725-248385AF9658}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{92CDB6F1-5E58-46d5-B725-248385AF9658}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">串口名称</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{F8BF5F3E-0E43-4e30-B969-55E301ECA2FA}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{F8BF5F3E-0E43-4e30-B969-55E301ECA2FA}" border="0" />baudRate: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{F8BF5F3E-0E43-4e30-B969-55E301ECA2FA}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F8BF5F3E-0E43-4e30-B969-55E301ECA2FA}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{F8BF5F3E-0E43-4e30-B969-55E301ECA2FA}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F8BF5F3E-0E43-4e30-B969-55E301ECA2FA}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">波特率(默认9600)</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			设置串口通讯参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SetProtocolParam</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{0823C237-7E7D-4724-9AA7-C1EB9B5FADB4}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0823C237-7E7D-4724-9AA7-C1EB9B5FADB4}" border="0" />portName: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0823C237-7E7D-4724-9AA7-C1EB9B5FADB4}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0823C237-7E7D-4724-9AA7-C1EB9B5FADB4}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0823C237-7E7D-4724-9AA7-C1EB9B5FADB4}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0823C237-7E7D-4724-9AA7-C1EB9B5FADB4}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">串口名称</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			设置串口通讯参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>setProtocol</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{7175CF9D-5BCC-4124-890E-CDEAA5DBF7F2}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{7175CF9D-5BCC-4124-890E-CDEAA5DBF7F2}" border="0" />frameH: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{7175CF9D-5BCC-4124-890E-CDEAA5DBF7F2}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7175CF9D-5BCC-4124-890E-CDEAA5DBF7F2}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{7175CF9D-5BCC-4124-890E-CDEAA5DBF7F2}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7175CF9D-5BCC-4124-890E-CDEAA5DBF7F2}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">帧头字节</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{8923D45A-025E-4ab1-9859-B4FF12A58992}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8923D45A-025E-4ab1-9859-B4FF12A58992}" border="0" />frameF: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8923D45A-025E-4ab1-9859-B4FF12A58992}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8923D45A-025E-4ab1-9859-B4FF12A58992}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8923D45A-025E-4ab1-9859-B4FF12A58992}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8923D45A-025E-4ab1-9859-B4FF12A58992}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">帧尾字节</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{41BC2708-6834-4cee-A77C-DF962DBC45D9}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{41BC2708-6834-4cee-A77C-DF962DBC45D9}" border="0" />keyIndex: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{41BC2708-6834-4cee-A77C-DF962DBC45D9}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{41BC2708-6834-4cee-A77C-DF962DBC45D9}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{41BC2708-6834-4cee-A77C-DF962DBC45D9}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{41BC2708-6834-4cee-A77C-DF962DBC45D9}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">键值索引号</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{B60FF02F-91BF-465b-AAB3-CFB10F7D6392}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B60FF02F-91BF-465b-AAB3-CFB10F7D6392}" border="0" />keyLen: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B60FF02F-91BF-465b-AAB3-CFB10F7D6392}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B60FF02F-91BF-465b-AAB3-CFB10F7D6392}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B60FF02F-91BF-465b-AAB3-CFB10F7D6392}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B60FF02F-91BF-465b-AAB3-CFB10F7D6392}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">键值字节长度</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{24AB5429-E575-4ed5-BC12-618D7FEA7D73}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{24AB5429-E575-4ed5-BC12-618D7FEA7D73}" border="0" />seq: <a href="EA48.htm">SequenceType</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{24AB5429-E575-4ed5-BC12-618D7FEA7D73}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{24AB5429-E575-4ed5-BC12-618D7FEA7D73}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{24AB5429-E575-4ed5-BC12-618D7FEA7D73}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{24AB5429-E575-4ed5-BC12-618D7FEA7D73}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">执行序列</div>
+</td>
+						</tr>
+					</table>
+):<a href="EA44.htm">Protocol</a>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			设置通讯协议规约&lt;br /&gt;&lt;br /&gt;@returns 返回设置的协议
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>setProtocol</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{0EF577A0-9430-452c-97A3-903FCA4C2914}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0EF577A0-9430-452c-97A3-903FCA4C2914}" border="0" />pt: <a href="EA44.htm">Protocol</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0EF577A0-9430-452c-97A3-903FCA4C2914}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0EF577A0-9430-452c-97A3-903FCA4C2914}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0EF577A0-9430-452c-97A3-903FCA4C2914}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0EF577A0-9430-452c-97A3-903FCA4C2914}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">协议规约</div>
+</td>
+						</tr>
+					</table>
+):<a href="EA44.htm">Protocol</a>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			设置通讯协议规约&lt;br /&gt;&lt;br /&gt;@returns 返回设置的协议
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>Clone</strong>():<a href="EA36.htm">CommiTarget</a>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			克隆通讯协议参数&lt;br /&gt;&lt;br /&gt;@returns 创建新的协议参数,参数值相同
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SrvEndPoint</strong>():IPEndPoint
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;property&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>readonly=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			读取服务端地址端口,使用串口协议时为null
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>PortName</strong>():string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;property&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>readonly=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			读取串口协议端口号
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>BaudRate</strong>():int
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;property&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>readonly=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			读取串口协议波特率
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>Parity</strong>():Parity
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;property&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>readonly=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			读取串口协议奇偶校验
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>DataBits</strong>():int
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;property&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>readonly=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			读取串口协议数据位
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>StopBits</strong>():StopBits
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;property&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>readonly=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			读取串口协议停止位
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>Ptl</strong>():<a href="EA44.htm">Protocol</a>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;property&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>readonly=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			读取协议规约
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+
+		</table>
+</div>		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="EA37.htm">«enumeration» CommiType</a><br />
+						Class &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> protocolType<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="EA44.htm">Protocol</a><br />
+						Class &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> ptl<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="EA46.htm">ResponseEventArgs</a><br />
+						Class &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> Target<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="EA39.htm">ErrorCommiEventArgs</a><br />
+						Class &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> Target<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="EA53.htm">CommiEntity</a><br />
+						Class &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> target<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

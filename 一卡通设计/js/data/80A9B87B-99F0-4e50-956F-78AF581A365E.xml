@@ -1,0 +1,7 @@
+tocTab[tocTab.length] = new Array("1", "1", "服务模型", "EARoot/EA1.htm", "31.png", "", "", "{669C83C9-2C22-47ae-8F49-BAF7CB4FA210}", "Package");
+tocTab[tocTab.length] = new Array("2", "1", "协议模型", "EARoot/EA2.htm", "32.png", "", "", "{163FA3BA-9CB0-4183-BC6A-C63080229A5A}", "Package");
+tocTab[tocTab.length] = new Array("3", "1", "Granity.CommiServer", "EARoot/EA3.htm", "31.png", "", "", "{2F5FF556-B2EF-457a-8BB4-4C23A106FD3B}", "Package");
+tocTab[tocTab.length] = new Array("4", "1", "Granity.communications", "EARoot/EA4.htm", "31.png", "", "", "{297D90DE-A86E-4a33-B95F-3E688AA1186A}", "Package");
+tocTab[tocTab.length] = new Array("5", "1", "通讯模型", "EARoot/EA5.htm", "32.png", "", "", "{DD5579F9-90A9-47cc-A546-0A55AE44328E}", "Package");
+tocTab[tocTab.length] = new Array("6", "1", "文件传输", "EARoot/EA6.htm", "31.png", "", "", "{1643F695-8CA5-47fe-AC4E-AB54B87466DB}", "Package");
+tocTab[tocTab.length] = new Array("7", "1", "用例模型", "EARoot/EA7.htm", "29.png", "", "", "{266223BD-706A-46e3-B6CA-88A7D5944ED4}", "Package");

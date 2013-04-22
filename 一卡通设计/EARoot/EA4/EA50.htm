@@ -1,0 +1,1383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Granity.communications::SvrFileTrans</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">SvrFileTrans  : public   class</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">2012-5-15 11:32:33</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">2012-5-15 11:32:33</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Administrator</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{B2A58D9D-E8DA-4e6d-8C47-77FDD45F129A}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA28.htm">Granity.communications</a>, <a href="../EA1/EA8.htm">服务模型</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">文件上传到服务器端保存,包含有增删改查功能 文件头协议格式：1,使用一个简单XML格式,属性值可数字字符汉字及.\-符号, 2,包含属性：id,pathfile,len,cmd,msg<br /><br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('Operations');" id="OperationsTitle">Operations</li>
+			<li onClick="parent.toggleItem('MessagesTo');" id="MessagesToTitle">Messages To</li>
+			<li onClick="parent.toggleItem('MessagesFrom');" id="MessagesFromTitle">Messages From</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="40%" class="TableHeading">Attribute</td>
+			<td width="60%" class="TableHeading">Details</td>
+		</tr>
+						<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private static Regex</i><br /><strong>&nbsp;&nbsp;regFilePath</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new Regex(@"^[\w\.]+$", RegexOptions.Compiled)<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			合法字符验证&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private static Regex</i><br /><strong>&nbsp;&nbsp;regXMLFormat</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new Regex(@"^<F(\s+.+?)(/>|></F>)$", RegexOptions.Compiled)<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			验证XML格式&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private static Regex</i><br /><strong>&nbsp;&nbsp;regAttribute</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new Regex("([\\w\\.\\u4E00-\\u9FA5]+)\\s*=\\s*[\"']([\\w\\s\\:\\.\\,\\\\\\u4E00-\\u9FA5-]*)[\"']", RegexOptions.Compiled)<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			文件头信息属性内容&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private static byte</i><br /><strong>&nbsp;&nbsp;fhStart</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> Encoding.GetEncoding("GB2312").GetBytes("<F")<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			文件头开始字节&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private static byte</i><br /><strong>&nbsp;&nbsp;fhEndseal</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> Encoding.GetEncoding("GB2312").GetBytes("/>")<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			文件头自封闭式结尾&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private static byte</i><br /><strong>&nbsp;&nbsp;fhEndclose</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> Encoding.GetEncoding("GB2312").GetBytes("></F>")<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			文件头关闭式结尾&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private static Dictionary<string, HdlExecute></i><br /><strong>&nbsp;&nbsp;cmdMap</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new Dictionary<string, HdlExecute>()<br></i>&nbsp;</td>
+			</tr>
+		</table>
+</div><div class="ItemBody" id="OperationsTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="40%" class="TableHeading">Operation</td>
+			<td width="60%" class="TableHeading">Details</td>
+		</tr>
+						<tr>
+				<td width="40%" class="TableRow">
+					<i>public static</i><br />
+					<strong>FindHeader</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{9DF8F179-3FF5-4787-97C6-E3C934512BB9}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{9DF8F179-3FF5-4787-97C6-E3C934512BB9}" border="0" />data: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{9DF8F179-3FF5-4787-97C6-E3C934512BB9}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{9DF8F179-3FF5-4787-97C6-E3C934512BB9}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{9DF8F179-3FF5-4787-97C6-E3C934512BB9}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{9DF8F179-3FF5-4787-97C6-E3C934512BB9}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据字节</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{E994B35F-7582-45c8-9DFB-C9AAD29D4E1D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{E994B35F-7582-45c8-9DFB-C9AAD29D4E1D}" border="0" />index: long</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{E994B35F-7582-45c8-9DFB-C9AAD29D4E1D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E994B35F-7582-45c8-9DFB-C9AAD29D4E1D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{E994B35F-7582-45c8-9DFB-C9AAD29D4E1D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E994B35F-7582-45c8-9DFB-C9AAD29D4E1D}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">寻找匹配的起点</div>
+</td>
+						</tr>
+					</table>
+):long
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			从响应字节中查找头信息位置&lt;br /&gt;&lt;br /&gt;@returns 返回头信息起点，不包含头信息返回-1
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public static</i><br />
+					<strong>FindHeader</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{62849103-1738-44c3-A815-DC6838F58034}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{62849103-1738-44c3-A815-DC6838F58034}" border="0" />data: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{62849103-1738-44c3-A815-DC6838F58034}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{62849103-1738-44c3-A815-DC6838F58034}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{62849103-1738-44c3-A815-DC6838F58034}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{62849103-1738-44c3-A815-DC6838F58034}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据字节</div>
+</td>
+						</tr>
+					</table>
+):long
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			从响应字节中查找头信息位置&lt;br /&gt;&lt;br /&gt;@returns 返回头信息起点，不包含头信息返回-1
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public static</i><br />
+					<strong>isFirstHeader</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{A9DDE7F4-D4DC-4857-A4A4-01D30405247D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A9DDE7F4-D4DC-4857-A4A4-01D30405247D}" border="0" />data: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A9DDE7F4-D4DC-4857-A4A4-01D30405247D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A9DDE7F4-D4DC-4857-A4A4-01D30405247D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A9DDE7F4-D4DC-4857-A4A4-01D30405247D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A9DDE7F4-D4DC-4857-A4A4-01D30405247D}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据字节</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{33C13695-1DE5-45e1-9095-2BDFA21FD7EF}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{33C13695-1DE5-45e1-9095-2BDFA21FD7EF}" border="0" />index: long</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{33C13695-1DE5-45e1-9095-2BDFA21FD7EF}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{33C13695-1DE5-45e1-9095-2BDFA21FD7EF}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{33C13695-1DE5-45e1-9095-2BDFA21FD7EF}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{33C13695-1DE5-45e1-9095-2BDFA21FD7EF}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">寻找匹配的起点</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			响应字节从检查起点开始是否是头信息&lt;br /&gt;&lt;br /&gt;@returns 是否匹配头信息
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public static</i><br />
+					<strong>isFirstHeader</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{8FE440A5-F256-489a-8B12-B5F4AF3AEF5D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8FE440A5-F256-489a-8B12-B5F4AF3AEF5D}" border="0" />data: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8FE440A5-F256-489a-8B12-B5F4AF3AEF5D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8FE440A5-F256-489a-8B12-B5F4AF3AEF5D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8FE440A5-F256-489a-8B12-B5F4AF3AEF5D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8FE440A5-F256-489a-8B12-B5F4AF3AEF5D}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据字节</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			响应字节从检查起点开始是否是头信息&lt;br /&gt;&lt;br /&gt;@returns 是否匹配头信息
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public static</i><br />
+					<strong>GetFileheader</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{CC5FB03A-8666-40c6-989A-D25CF1C2D188}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{CC5FB03A-8666-40c6-989A-D25CF1C2D188}" border="0" />data: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{CC5FB03A-8666-40c6-989A-D25CF1C2D188}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CC5FB03A-8666-40c6-989A-D25CF1C2D188}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{CC5FB03A-8666-40c6-989A-D25CF1C2D188}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CC5FB03A-8666-40c6-989A-D25CF1C2D188}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据字节</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{3C9F803E-DB08-470a-8615-AEB2BF2D3BF4}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{3C9F803E-DB08-470a-8615-AEB2BF2D3BF4}" border="0" />index: long</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{3C9F803E-DB08-470a-8615-AEB2BF2D3BF4}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{3C9F803E-DB08-470a-8615-AEB2BF2D3BF4}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{3C9F803E-DB08-470a-8615-AEB2BF2D3BF4}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{3C9F803E-DB08-470a-8615-AEB2BF2D3BF4}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">寻找匹配的起点</div>
+</td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			从响应字节中检查匹配的头信息&lt;br /&gt;&lt;br /&gt;@returns 有头信息返回头信息字节数据,无则返回NULL
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public static</i><br />
+					<strong>GetFileheader</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{B2F4127D-BE1A-4e9d-890B-46999B47C03F}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B2F4127D-BE1A-4e9d-890B-46999B47C03F}" border="0" />data: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B2F4127D-BE1A-4e9d-890B-46999B47C03F}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B2F4127D-BE1A-4e9d-890B-46999B47C03F}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B2F4127D-BE1A-4e9d-890B-46999B47C03F}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B2F4127D-BE1A-4e9d-890B-46999B47C03F}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据字节</div>
+</td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			从响应字节中检查匹配的头信息&lt;br /&gt;&lt;br /&gt;@returns 有头信息返回头信息字节数据,无则返回NULL
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public static</i><br />
+					<strong>ParseInfo</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{6B5576A1-FC41-4fac-993F-C385D322D6CA}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{6B5576A1-FC41-4fac-993F-C385D322D6CA}" border="0" />header: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{6B5576A1-FC41-4fac-993F-C385D322D6CA}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6B5576A1-FC41-4fac-993F-C385D322D6CA}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{6B5576A1-FC41-4fac-993F-C385D322D6CA}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6B5576A1-FC41-4fac-993F-C385D322D6CA}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">头字节</div>
+</td>
+						</tr>
+					</table>
+):NameValueCollection
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			头信息解析为字典对&lt;br /&gt;&lt;br /&gt;@returns 字典对
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public static</i><br />
+					<strong>ParseInfo</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{C83E150D-D905-4374-9A97-B512155F8C44}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{C83E150D-D905-4374-9A97-B512155F8C44}" border="0" />info: NameValueCollection</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{C83E150D-D905-4374-9A97-B512155F8C44}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C83E150D-D905-4374-9A97-B512155F8C44}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{C83E150D-D905-4374-9A97-B512155F8C44}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C83E150D-D905-4374-9A97-B512155F8C44}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			头信息解析为字典对&lt;br /&gt;&lt;br /&gt;@param =&quot;header&quot; 头字节&lt;br /&gt;@returns 字典对
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private static</i><br />
+					<strong>getLocalPath</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{AAE18A72-0AC6-465e-8825-280F699D6B92}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{AAE18A72-0AC6-465e-8825-280F699D6B92}" border="0" />pathfile: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{AAE18A72-0AC6-465e-8825-280F699D6B92}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AAE18A72-0AC6-465e-8825-280F699D6B92}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{AAE18A72-0AC6-465e-8825-280F699D6B92}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AAE18A72-0AC6-465e-8825-280F699D6B92}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">请求指令中的相对路径</div>
+</td>
+						</tr>
+					</table>
+):string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			由相对路径转换本地路径&lt;br /&gt;&lt;br /&gt;@returns 本地路径
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private static</i><br />
+					<strong>MergeResponseHdl</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{1049362B-4C97-4d9a-9F9C-1F8DEB2FBD9D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{1049362B-4C97-4d9a-9F9C-1F8DEB2FBD9D}" border="0" />buffer: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{1049362B-4C97-4d9a-9F9C-1F8DEB2FBD9D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1049362B-4C97-4d9a-9F9C-1F8DEB2FBD9D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{1049362B-4C97-4d9a-9F9C-1F8DEB2FBD9D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1049362B-4C97-4d9a-9F9C-1F8DEB2FBD9D}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据字节</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{C60D2E56-622B-4e14-AAF7-0D30B79EC4F7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{C60D2E56-622B-4e14-AAF7-0D30B79EC4F7}" border="0" />destlist: IList<byte[]></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{C60D2E56-622B-4e14-AAF7-0D30B79EC4F7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C60D2E56-622B-4e14-AAF7-0D30B79EC4F7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{C60D2E56-622B-4e14-AAF7-0D30B79EC4F7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C60D2E56-622B-4e14-AAF7-0D30B79EC4F7}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">完整包列表</div>
+</td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			对响应结果按照协议分成完整包,返回剩余不完整包&lt;br /&gt;&lt;br /&gt;@returns 返回剩余不完整包
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>CmdMap</strong>():Dictionary<string, HdlExecute>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;property&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>readonly=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			提供服务的指令映射列表
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>Execute</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{D4713565-9123-4201-9CEE-319B2C8E06BB}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{D4713565-9123-4201-9CEE-319B2C8E06BB}" border="0" />clientinfo: <a href="EA30.htm">ClientInfo</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{D4713565-9123-4201-9CEE-319B2C8E06BB}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D4713565-9123-4201-9CEE-319B2C8E06BB}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{D4713565-9123-4201-9CEE-319B2C8E06BB}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D4713565-9123-4201-9CEE-319B2C8E06BB}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{B1BE1B3B-283B-4bbd-B2C6-59EE5038385E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B1BE1B3B-283B-4bbd-B2C6-59EE5038385E}" border="0" />data: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B1BE1B3B-283B-4bbd-B2C6-59EE5038385E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B1BE1B3B-283B-4bbd-B2C6-59EE5038385E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B1BE1B3B-283B-4bbd-B2C6-59EE5038385E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B1BE1B3B-283B-4bbd-B2C6-59EE5038385E}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">接收请求数据</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{1EF5E577-CC54-44bb-99D0-7F1C8883FAAE}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{1EF5E577-CC54-44bb-99D0-7F1C8883FAAE}" border="0" />len: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{1EF5E577-CC54-44bb-99D0-7F1C8883FAAE}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1EF5E577-CC54-44bb-99D0-7F1C8883FAAE}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{1EF5E577-CC54-44bb-99D0-7F1C8883FAAE}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1EF5E577-CC54-44bb-99D0-7F1C8883FAAE}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{E17B5473-0080-4f88-9059-B6A4DE92F242}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{E17B5473-0080-4f88-9059-B6A4DE92F242}" border="0" />stream: MemoryStream</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{E17B5473-0080-4f88-9059-B6A4DE92F242}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E17B5473-0080-4f88-9059-B6A4DE92F242}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>inout</td>
+						</tr>
+						<tr id="param{E17B5473-0080-4f88-9059-B6A4DE92F242}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E17B5473-0080-4f88-9059-B6A4DE92F242}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]override=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			重载执行函数,不完整帧时接收数据缓存&lt;br /&gt;&lt;br /&gt;@param =&quot;client&quot; 通讯连接&lt;br /&gt;@param =&quot;bufferStream&quot; 缓存字节流&lt;br /&gt;@returns 返回响应数据,帧不完整返回0字节,待接收完整帧执行后返回响应结果
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ExtendHandle</strong>():EventHandler<ExtendEventArgs>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;event&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			扩展服务事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>LoadFile</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{ACED633B-F401-4b87-9C3A-8BA43DA3C636}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{ACED633B-F401-4b87-9C3A-8BA43DA3C636}" border="0" />clientinfo: <a href="EA30.htm">ClientInfo</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{ACED633B-F401-4b87-9C3A-8BA43DA3C636}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{ACED633B-F401-4b87-9C3A-8BA43DA3C636}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{ACED633B-F401-4b87-9C3A-8BA43DA3C636}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{ACED633B-F401-4b87-9C3A-8BA43DA3C636}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{EFE41A02-30EB-47ad-91F5-E83372AF66FE}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{EFE41A02-30EB-47ad-91F5-E83372AF66FE}" border="0" />context: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{EFE41A02-30EB-47ad-91F5-E83372AF66FE}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{EFE41A02-30EB-47ad-91F5-E83372AF66FE}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{EFE41A02-30EB-47ad-91F5-E83372AF66FE}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{EFE41A02-30EB-47ad-91F5-E83372AF66FE}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">文件头和文件内容</div>
+</td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]Attribute=[CommandServer("TransFile.send")]</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			加载文件,执行结果返回&lt;br /&gt;&lt;br /&gt;@param =&quot;client&quot; 通讯连接&lt;br /&gt;@returns 返回执行结果文件头
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>GetFile</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{C3DFE5B0-8753-4a2e-8138-9076532894FB}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{C3DFE5B0-8753-4a2e-8138-9076532894FB}" border="0" />clientinfo: <a href="EA30.htm">ClientInfo</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{C3DFE5B0-8753-4a2e-8138-9076532894FB}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C3DFE5B0-8753-4a2e-8138-9076532894FB}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{C3DFE5B0-8753-4a2e-8138-9076532894FB}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C3DFE5B0-8753-4a2e-8138-9076532894FB}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{23857FD8-163F-45b3-946A-A52CF585A0B4}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{23857FD8-163F-45b3-946A-A52CF585A0B4}" border="0" />context: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{23857FD8-163F-45b3-946A-A52CF585A0B4}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{23857FD8-163F-45b3-946A-A52CF585A0B4}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{23857FD8-163F-45b3-946A-A52CF585A0B4}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{23857FD8-163F-45b3-946A-A52CF585A0B4}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">文件头和文件内容</div>
+</td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]Attribute=[CommandServer("TransFile.get")]</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			获取文件,执行结果返回&lt;br /&gt;&lt;br /&gt;@param =&quot;client&quot; 通讯连接&lt;br /&gt;@returns 返回执行结果头信息和文件内容
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>DelFile</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{4DC51E5E-47E7-4341-B819-A08E6FA18EA4}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{4DC51E5E-47E7-4341-B819-A08E6FA18EA4}" border="0" />clientinfo: <a href="EA30.htm">ClientInfo</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4DC51E5E-47E7-4341-B819-A08E6FA18EA4}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4DC51E5E-47E7-4341-B819-A08E6FA18EA4}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{4DC51E5E-47E7-4341-B819-A08E6FA18EA4}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4DC51E5E-47E7-4341-B819-A08E6FA18EA4}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{86B6A09B-A65A-48b9-87C1-43F5463E5D5A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{86B6A09B-A65A-48b9-87C1-43F5463E5D5A}" border="0" />context: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{86B6A09B-A65A-48b9-87C1-43F5463E5D5A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{86B6A09B-A65A-48b9-87C1-43F5463E5D5A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{86B6A09B-A65A-48b9-87C1-43F5463E5D5A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{86B6A09B-A65A-48b9-87C1-43F5463E5D5A}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">文件头和文件内容</div>
+</td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]Attribute=[CommandServer("TransFile.del")]</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			删除文件,执行结果返回&lt;br /&gt;&lt;br /&gt;@returns 返回执行结果头信息
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>HeadBeat</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{BA442EF4-D65E-4a3c-8307-53DFD2386D11}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{BA442EF4-D65E-4a3c-8307-53DFD2386D11}" border="0" />clientinfo: <a href="EA30.htm">ClientInfo</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{BA442EF4-D65E-4a3c-8307-53DFD2386D11}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BA442EF4-D65E-4a3c-8307-53DFD2386D11}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{BA442EF4-D65E-4a3c-8307-53DFD2386D11}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BA442EF4-D65E-4a3c-8307-53DFD2386D11}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{5BEE7B5B-816D-402d-86F1-0CE4FAF397FA}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5BEE7B5B-816D-402d-86F1-0CE4FAF397FA}" border="0" />context: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5BEE7B5B-816D-402d-86F1-0CE4FAF397FA}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5BEE7B5B-816D-402d-86F1-0CE4FAF397FA}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5BEE7B5B-816D-402d-86F1-0CE4FAF397FA}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5BEE7B5B-816D-402d-86F1-0CE4FAF397FA}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">文件头和文件内容</div>
+</td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]Attribute=[CommandServer("TransFile.beat")]</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			心跳,无执行直接返回&lt;br /&gt;&lt;br /&gt;@param =&quot;client&quot; 通讯连接&lt;br /&gt;@returns 返回执行结果头信息
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiTrans</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{74971E79-2D42-4ce6-83DB-586BF1A5E8E1}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{74971E79-2D42-4ce6-83DB-586BF1A5E8E1}" border="0" />clientinfo: <a href="EA30.htm">ClientInfo</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{74971E79-2D42-4ce6-83DB-586BF1A5E8E1}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{74971E79-2D42-4ce6-83DB-586BF1A5E8E1}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{74971E79-2D42-4ce6-83DB-586BF1A5E8E1}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{74971E79-2D42-4ce6-83DB-586BF1A5E8E1}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{86791D9F-6549-40d8-BB37-BFA8D6AEC83A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{86791D9F-6549-40d8-BB37-BFA8D6AEC83A}" border="0" />context: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{86791D9F-6549-40d8-BB37-BFA8D6AEC83A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{86791D9F-6549-40d8-BB37-BFA8D6AEC83A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{86791D9F-6549-40d8-BB37-BFA8D6AEC83A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{86791D9F-6549-40d8-BB37-BFA8D6AEC83A}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">头信息和要传送的指令或结果</div>
+</td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]Attribute=[CommandServer("TransFile.trans")]</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			传递通讯,作为通讯的中转桥,既传送请求指令又传送响应结果 包含参数: len,dir=request/response,cmd=TransFile.trans,source,target, CommiType,addr=ipaddr/COM1,port,baudRate,parity,dataBits,stopBits&lt;br /&gt;&lt;br /&gt;@param =&quot;client&quot; 通讯连接&lt;br /&gt;@returns 返回0字节,这里返回数据需要的是异步过程,由响应事件后再回传数据
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ExtendSrv</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{CB734798-9370-4468-90D5-A2B4226FD0B8}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{CB734798-9370-4468-90D5-A2B4226FD0B8}" border="0" />clientinfo: <a href="EA30.htm">ClientInfo</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{CB734798-9370-4468-90D5-A2B4226FD0B8}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CB734798-9370-4468-90D5-A2B4226FD0B8}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{CB734798-9370-4468-90D5-A2B4226FD0B8}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CB734798-9370-4468-90D5-A2B4226FD0B8}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{54872525-F55A-4ec8-B76D-9BABFCCB0B23}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{54872525-F55A-4ec8-B76D-9BABFCCB0B23}" border="0" />context: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{54872525-F55A-4ec8-B76D-9BABFCCB0B23}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{54872525-F55A-4ec8-B76D-9BABFCCB0B23}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{54872525-F55A-4ec8-B76D-9BABFCCB0B23}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{54872525-F55A-4ec8-B76D-9BABFCCB0B23}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">头信息和要传送的指令或结果</div>
+</td>
+						</tr>
+					</table>
+):byte
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>array=[]Attribute=[CommandServer("TransFile.extend")]</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			扩展服务通讯,作为系统扩展应用,能够触发扩展事件 包含参数: len,cmd=TransFile.extend,及其他扩展参数&lt;br /&gt;&lt;br /&gt;@param =&quot;client&quot; 通讯连接&lt;br /&gt;@returns 返回传送
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SvrFileTrans</strong>():void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			构造函数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+
+		</table>
+</div>		<div class="ItemBody" id="MessagesToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Message</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA50.htm">SvrFileTrans</a></td>
+					<td width="30%" class="TableRow" valign="top">ExtendHandle()</td>
+					<td width="40%" class="TableRow" valign="top"><strong>Type:</strong> Sequence<br />Synchronous Call</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA12.htm">«boundary» winFileSrv.ServiceFile</a></td>
+					<td width="30%" class="TableRow" valign="top">svrfile_ExtendHandle</td>
+					<td width="40%" class="TableRow" valign="top"><strong>Type:</strong> Sequence<br />Synchronous Call</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA50.htm">SvrFileTrans</a></td>
+					<td width="30%" class="TableRow" valign="top">ExtendSrv(ClientInfo,  byte[])</td>
+					<td width="40%" class="TableRow" valign="top"><strong>Type:</strong> Sequence<br />Synchronous Call</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="MessagesFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Message</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA12.htm">«boundary» winFileSrv.ServiceFile</a></td>
+					<td width="30%" class="TableRow" valign="top">SvrFileTrans()</td>
+					<td width="40%" class="TableRow" valign="top"><strong>Type:</strong> Sequence<br />Synchronous Call</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA50.htm">SvrFileTrans</a></td>
+					<td width="30%" class="TableRow" valign="top">ExtendHandle()</td>
+					<td width="40%" class="TableRow" valign="top"><strong>Type:</strong> Sequence<br />Synchronous Call</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA35.htm">CommiServer</a></td>
+					<td width="30%" class="TableRow" valign="top">Execute(ClientInfo,  byte[],  int,  MemoryStream*)</td>
+					<td width="40%" class="TableRow" valign="top"><strong>Type:</strong> Sequence<br />Synchronous Call</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA50.htm">SvrFileTrans</a></td>
+					<td width="30%" class="TableRow" valign="top">ExtendSrv(ClientInfo,  byte[])</td>
+					<td width="40%" class="TableRow" valign="top"><strong>Type:</strong> Sequence<br />Synchronous Call</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA49.htm">ServerBase</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA33.htm">CommandServerAttribute</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Dependency</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("7.2.4:1", "", "040：门禁系统", "EARoot/EA7/EA2/EA4/EA173.htm", "180.png", "16", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("7.2.4:2", "", "定时任务设置", "EARoot/EA7/EA2/EA4/EA176.htm", "7.png", "365", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.4:3", "", "分组管理", "EARoot/EA7/EA2/EA4/EA177.htm", "7.png", "367", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.4:4", "", "门禁分组维护", "EARoot/EA7/EA2/EA4/EA178.htm", "7.png", "363", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.4:5", "", "刷卡记录查询", "EARoot/EA7/EA2/EA4/EA179.htm", "7.png", "370", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.4:6", "", "时段设置", "EARoot/EA7/EA2/EA4/EA180.htm", "7.png", "364", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.4:7", "", "设备参数同步", "EARoot/EA7/EA2/EA4/EA181.htm", "7.png", "369", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.4:8", "", "通讯参数设置", "EARoot/EA7/EA2/EA4/EA182.htm", "7.png", "366", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.4:9", "", "通讯协议定义", "EARoot/EA7/EA2/EA4/EA183.htm", "7.png", "371", "0", "", "UseCase");

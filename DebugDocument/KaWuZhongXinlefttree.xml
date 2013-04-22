@@ -1,0 +1,208 @@
+<rightsql>
+  <ID>239479ba-ac10-48ec-bc7f-9aaed81a651f</ID> 
+  <PID>68dab3bc-a8df-4a2a-97a2-c4d1b840fb9f</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=卡务中心,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>卡务中心</name> 
+  <text>卡务中心</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>207</serial> 
+  <level>3</level> 
+</rightsql>
+
+	<rightsql>
+	  <ID>0403d620-ef27-41bf-89fc-3f9a6b4a8764</ID> 
+	  <PID>239479ba-ac10-48ec-bc7f-9aaed81a651f</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=发行管理,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>发行管理</name> 
+	  <text>发行管理</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <scope /> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>400</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>ed329d29-f780-45b4-87d8-3bde5484e6e0</ID> 
+	  <PID>239479ba-ac10-48ec-bc7f-9aaed81a651f</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=卡片管理,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>卡片管理</name> 
+	  <text>卡片管理</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <scope /> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>589</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>829f01cd-5a1f-4cb3-90ac-7360f1488a8b</ID> 
+	  <PID>239479ba-ac10-48ec-bc7f-9aaed81a651f</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=发行器设置,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>发行器设置</name> 
+	  <text>发行器设置</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <scope /> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>590</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>1b259796-6875-4e60-a01d-2d0f23350ea1</ID> 
+	  <PID>239479ba-ac10-48ec-bc7f-9aaed81a651f</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=黑名单设置,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>黑名单设置</name> 
+	  <text>黑名单设置</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <scope /> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>735</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+
+<rightsql>
+  <ID>1d33a870-d8e0-4046-afc2-cdcd4575c329</ID> 
+  <PID>68dab3bc-a8df-4a2a-97a2-c4d1b840fb9f</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=查询管理,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>查询管理</name> 
+  <text>查询管理</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>211</serial> 
+  <level>3</level> 
+</rightsql>
+
+	<rightsql>
+	  <ID>352ad8f6-658a-4854-a4cf-0c03b8f1d2fc</ID> 
+	  <PID>1d33a870-d8e0-4046-afc2-cdcd4575c329</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=卡片发行记录,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>卡片发行记录</name> 
+	  <text>卡片发行记录</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>212</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>afeb509c-aef8-45f9-a7f3-89cbdb571268</ID> 
+	  <PID>1d33a870-d8e0-4046-afc2-cdcd4575c329</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=卡片挂失解挂记录,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>卡片挂失解挂记录</name> 
+	  <text>卡片挂失解挂记录</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>213</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>aecb7253-29d5-40bd-9e4f-4afa8b641193</ID> 
+	  <PID>1d33a870-d8e0-4046-afc2-cdcd4575c329</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=卡片充值记录,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>卡片充值记录</name> 
+	  <text>卡片充值记录</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>214</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>2143f516-1968-4364-9e9a-1ec44abd01f0</ID> 
+	  <PID>1d33a870-d8e0-4046-afc2-cdcd4575c329</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=卡片延期记录,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>卡片延期记录</name> 
+	  <text>卡片延期记录</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>215</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>f8e54ca7-6dee-4fb1-90c7-1d7c27c71873</ID> 
+	  <PID>1d33a870-d8e0-4046-afc2-cdcd4575c329</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=退卡记录,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>退卡记录</name> 
+	  <text>退卡记录</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>216</serial> 
+	  <level>4</level> 
+	</rightsql>
+
+	<rightsql>
+	  <ID>05bd5fb3-1eae-42ae-bd98-822656d8b955</ID> 
+	  <PID>1d33a870-d8e0-4046-afc2-cdcd4575c329</PID> 
+	  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=补助记录,@type=基本操作集,@namecode=</ntag> 
+	  <namecode /> 
+	  <name>补助记录</name> 
+	  <text>补助记录</text> 
+	  <ntype>基本操作集</ntype> 
+	  <alone>false</alone> 
+	  <userright>增删改</userright> 
+	  <first>false</first> 
+	  <hide>false</hide> 
+	  <navitem /> 
+	  <serial>217</serial> 
+	  <level>4</level> 
+	</rightsql>

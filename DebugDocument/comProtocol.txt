@@ -1,0 +1,28 @@
+		[0x00000000]	"系统参数错=?#1#word##"	string
+		[0x00000001]	"白名单错=?#1#word##"	string
+		[0x00000002]	"收费方式错=?#1#word##"	string
+		[0x00000003]	"时间格式错=?#1#word##"	string
+		[0x00000004]	"白名单溢出=?#1#word##"	string
+		[0x00000005]	"时段错=?#1#word##"	string
+		[0x00000006]	"车位错=?#1#word##"	string
+		[0x00000007]	"服务器=?#1#word##"	string
+
+
+		[0x00000000]	"道闸状态=?#2#word##"	string
+		[0x00000001]	"出卡机卡欠量=?#1#word##"	string
+		[0x00000002]	"出卡机错=?#1#word##"	string
+		[0x00000003]	"地感错=?#1#word##"	string
+		[0x00000004]	"CAN通信失败=?#1#word##"	string
+		[0x00000005]	"中文屏错=?#1#word##"	string
+		[0x00000006]	"满位屏错=?#1#word##"	string
+		[0x00000007]	"外设保留=?#2#word##"	string
+		[0x00000008]	"收费屏错=?#1#word##"	string
+		[0x00000009]	"LCD错=?#1#word##"	string
+		[0x0000000a]	"缺纸=?#1#word##"	string
+		[0x0000000b]	"纸少=?#1#word##"	string
+		[0x0000000c]	"记录区溢出=?#1#word##"	string
+		[0x0000000d]	"入口堵塞=?#1#word##"	string
+
+"E:\\GranityPark-181\\granityMgr2.2\\bin\\Debug\\images\\140178cb-24be-4714-9268-af90a8f69527.jpg"
+
+		

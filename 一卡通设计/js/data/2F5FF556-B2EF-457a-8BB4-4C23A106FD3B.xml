@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("3:1", "", "Granity.CommiServer", "EARoot/EA3/EA17.htm", "175.png", "22", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("3:2", "", "ChannelWorker", "EARoot/EA3/EA19.htm", "5.png", "643", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3:3", "", "ChannelWorkerMgr", "EARoot/EA3/EA20.htm", "5.png", "642", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3:4", "", "DeviceBase", "EARoot/EA3/EA21.htm", "5.png", "621", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3:5", "", "DeviceChannel", "EARoot/EA3/EA22.htm", "5.png", "641", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3:6", "", "DeviceDoor", "EARoot/EA3/EA23.htm", "5.png", "622", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3:7", "", "DeviceEatery", "EARoot/EA3/EA24.htm", "5.png", "640", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3:8", "", "DeviceMonitorMgr", "EARoot/EA3/EA25.htm", "5.png", "620", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3:9", "", "SynDeviceParam", "EARoot/EA3/EA26.htm", "5.png", "644", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3:10", "", "TransArg", "EARoot/EA3/EA27.htm", "5.png", "645", "0", "", "Class");

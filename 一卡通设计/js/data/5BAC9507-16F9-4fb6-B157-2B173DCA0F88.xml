@@ -1,0 +1,11 @@
+tocTab[tocTab.length] = new Array("7.2.1:1", "", "主用例", "EARoot/EA7/EA2/EA1/EA111.htm", "180.png", "3", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("7.2.1:2", "", "发行卡", "EARoot/EA7/EA2/EA1/EA114.htm", "7.png", "13", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.1:3", "", "计时收费", "EARoot/EA7/EA2/EA1/EA115.htm", "7.png", "32", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.1:4", "", "交互资料", "EARoot/EA7/EA2/EA1/EA116.htm", "7.png", "26", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.1:5", "", "卡充值", "EARoot/EA7/EA2/EA1/EA117.htm", "7.png", "23", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.1:6", "", "卡延期", "EARoot/EA7/EA2/EA1/EA118.htm", "7.png", "21", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.1:7", "", "车牌识别", "EARoot/EA7/EA2/EA1/EA119.htm", "7.png", "30", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.1:8", "", "临时卡收费", "EARoot/EA7/EA2/EA1/EA120.htm", "7.png", "12", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.1:9", "", "退卡", "EARoot/EA7/EA2/EA1/EA121.htm", "7.png", "22", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.1:10", "", "无卡延期", "EARoot/EA7/EA2/EA1/EA122.htm", "7.png", "25", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("7.2.1:11", "", "有卡延期", "EARoot/EA7/EA2/EA1/EA124.htm", "7.png", "24", "0", "", "UseCase");

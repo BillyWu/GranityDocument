@@ -1,0 +1,89 @@
+<D>
+
+	<PL t=\"P\">
+
+		<L t=\"Ts\">
+
+			<P n=\"RecordCount\" v=\"\" t=\"s\" pt=\"M\" />
+
+			<P n=\"Command\" v=\"TransParam\" t=\"s\" />
+
+			<P n=\"UnitName\" v=\"有效时段\" t=\"s\" />
+
+		</L>
+
+		<L t=\"T\">
+
+			<P n=\"WorkItem\" v=\"有效时段\" t=\"s\" />
+
+			<P n=\"UnitName\" v=\"有效时段\" t=\"s\" />
+
+			<P n=\"Command\" v=\"Query\" t=\"s\" />
+
+			<P n=\"DataItem\" v=\"有效时段\" t=\"s\" />
+
+			<P n=\"DataSrcFile\" v=\"有效时段\" t=\"s\" />
+
+			<P n=\"DictSrcFile\" v=\"\" t=\"s\" />
+
+			<P n=\"PageSize\" v=\"\" t=\"s\" />
+
+			<P n=\"DictCol\" v=\"\" t=\"s\" />
+
+			<P n=\"FmtCol\" v=\"\" t=\"s\" />
+
+		</L>
+
+		<L t=\"C\">
+
+			<P n=\"RecordCount\" v=\"1\" t=\"s\" pt=\"M\" />
+
+		</L>
+
+	</PL>
+
+
+
+	<PL t=\"S\">
+
+		<L t=\"D\">
+
+			<P n=\"StartDate\" v=\"2013-02-25\" t=\"d\" />
+
+			<P n=\"EndDate\" v=\"2013-03-25\" t=\"d\" />
+
+			<P n=\"UserAccounts\" v=\"root\" t=\"s\" />
+
+			<P n=\"UserSn\" v=\"\" t=\"s\" />
+
+			<P n=\"UserName\" v=\"SYSTEM_User\" t=\"s\" />
+
+			<P n=\"Company\" v=\"\" t=\"s\" />
+
+			<P n=\"OPTUnitID\" v=\"18830\" t=\"s\" />
+
+			<P n=\"UnitCode\" v=\"18830\" t=\"s\" />
+
+			<P n=\"DWName\" v=\"Granity\" t=\"s\" />
+
+			<P n=\"DWSupName\" v=\"\" t=\"s\" />
+
+			<P n=\"DeptSaleName\" v=\"Granity\" t=\"s\" />
+
+			<P n=\"DeptSupName\" v=\"Granity\" t=\"s\" />
+
+			<P n=\"DeptName\" v=\"Granity\" t=\"s\" />
+
+			<P n=\"DeptCode\" v=\"18830\" t=\"s\" />
+
+			<P n=\"Rights\" v=\"\" t=\"s\" />
+
+			<P n=\"syspath\" v=\"http://localhost:4205/WebApp/\" t=\"s\" />
+
+			<P n=\"LimitDays\" v=\"0\" t=\"i\" />
+
+		</L>
+
+	</PL>
+
+</D>

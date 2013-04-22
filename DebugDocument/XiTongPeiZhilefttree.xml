@@ -1,0 +1,187 @@
+<rightsql>
+  <ID>0ca9cd4c-1041-4136-b8b7-01e2114359f1</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=组织机构集团,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>组织机构集团</name> 
+  <text>组织机构</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>19</serial> 
+  <level>3</level> 
+</rightsql>
+
+<rightsql>
+  <ID>419b9b77-92d3-43e2-a5f6-0d911b3b59eb</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=sys_dataitems,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>sys_dataitems</name> 
+  <text>数据源设计</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>22</serial> 
+  <level>3</level> 
+</rightsql>
+
+<rightsql>
+  <ID>fbb563c6-1e5e-40e3-bac5-72117c67a5cf</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=sys_sqldesigner,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>sys_sqldesigner</name> 
+  <text>查询设计</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>25</serial> 
+  <level>3</level> 
+</rightsql>
+
+<rightsql>
+  <ID>a7326644-7d77-417e-b5bd-971af40769a7</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=sys_assign,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>sys_assign</name> 
+  <text>菜单分配</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>167</serial> 
+  <level>3</level> 
+</rightsql>
+
+<rightsql>
+  <ID>d2909d7a-4b46-4e37-b93e-0896bdb21458</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=sys_options,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>sys_options</name> 
+  <text>菜单分组</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>168</serial> 
+  <level>3</level> 
+</rightsql>
+
+<rightsql>
+  <ID>f2140e2c-265b-4360-985b-b322a235223e</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=sys_rights,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>sys_rights</name> 
+  <text>权限定义</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>169</serial> 
+  <level>3</level> 
+</rightsql>
+
+<rightsql>
+  <ID>403db70f-0cee-4c84-a83e-3619f392bc74</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=数据库配置,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>数据库配置</name> 
+  <text>数据库配置</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>177</serial> 
+  <level>3</level> 
+</rightsql>
+
+<rightsql>
+  <ID>b0b0081f-a3de-4574-b4c0-300772f5dd33</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=sys_unititems,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>sys_unititems</name> 
+  <text>菜单设计</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>216</serial> 
+  <level>3</level> 
+</rightsql>
+
+<rightsql>
+  <ID>6b78a3c1-3962-4200-8f38-4410491699d7</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=系统配置表,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>系统配置表</name> 
+  <text>系统配置表</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>222</serial> 
+  <level>3</level> 
+</rightsql>
+
+<rightsql>
+  <ID>8b4010f3-9edc-4c10-9c3c-56e1b75fbe8d</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=卡片参数设置,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>卡片参数设置</name> 
+  <text>卡片参数设置</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>222</serial> 
+  <level>3</level> 
+</rightsql>
+
+<rightsql>
+  <ID>259f3203-2420-44ff-a84d-54bb2617971b</ID> 
+  <PID>cd81d881-ca09-41eb-b46d-4ea6e4147705</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=工作日志,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>工作日志</name> 
+  <text>工作日志</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>238</serial> 
+  <level>3</level> 
+</rightsql>
+

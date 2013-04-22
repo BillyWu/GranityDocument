@@ -1,0 +1,134 @@
+<rightsql>
+  <ID>cd81d881-ca09-41eb-b46d-4ea6e4147705</ID> 
+  <PID>3b2a9a0d-1f0f-45d5-ab25-8e675fb74e7e</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=系统配置,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>系统配置</name> 
+  <text>系统配置</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <level>2</level> 
+</rightsql>
+
+<rightsql>
+  <ID>48802388-261a-492f-94ab-efbc923eab26</ID> 
+  <PID>3b2a9a0d-1f0f-45d5-ab25-8e675fb74e7e</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=用户管理,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>用户管理</name> 
+  <text>用户管理</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>7</serial> 
+  <level>2</level> 
+</rightsql>
+
+<rightsql>
+  <ID>68dab3bc-a8df-4a2a-97a2-c4d1b840fb9f</ID> 
+  <PID>3b2a9a0d-1f0f-45d5-ab25-8e675fb74e7e</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=卡务中心,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>卡务中心</name> 
+  <text>卡务中心</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>8</serial> 
+  <level>2</level> 
+</rightsql>
+
+<rightsql>
+  <ID>2e63d307-1480-426c-8a9c-87a314526985</ID>
+  <PID>3b2a9a0d-1f0f-45d5-ab25-8e675fb74e7e</PID>
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=门禁系统,@type=操作集组,@namecode=</ntag>
+  <namecode></namecode>
+  <name>门禁系统</name>
+  <text>门禁系统</text>
+  <ntype>操作集组</ntype>
+  <alone>false</alone>
+  <userright>增删改</userright>
+  <first>false</first>
+  <hide>false</hide>
+  <navitem></navitem>
+  <serial>10</serial>
+  <level>2</level>
+</rightsql>
+
+<rightsql>
+  <ID>62f51bfd-e128-4817-a5e7-617d1f5aa287</ID> 
+  <PID>3b2a9a0d-1f0f-45d5-ab25-8e675fb74e7e</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=1,@first=0,@code=,@name=停车场,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>停车场</name> 
+  <text>停车场</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>true</hide> 
+  <navitem /> 
+  <serial>38</serial> 
+  <level>2</level> 
+</rightsql>
+
+<rightsql>
+  <ID>bb381499-b065-446d-bf81-805cede8009d</ID> 
+  <PID>3b2a9a0d-1f0f-45d5-ab25-8e675fb74e7e</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=考勤系统,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>考勤系统</name> 
+  <text>考勤系统</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>38</serial> 
+  <level>2</level> 
+</rightsql>
+
+<rightsql>
+  <ID>68bc5532-4a6f-4b24-8000-a2fccc70e6ea</ID> 
+  <PID>3b2a9a0d-1f0f-45d5-ab25-8e675fb74e7e</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=消费系统,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>消费系统</name> 
+  <text>消费系统</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>39</serial> 
+  <level>2</level> 
+</rightsql>
+
+<rightsql>
+  <ID>49c4643f-454b-44fa-a84b-ee44806aa0c8</ID> 
+  <PID>3b2a9a0d-1f0f-45d5-ab25-8e675fb74e7e</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=通道闸系统,@type=操作集组,@namecode=</ntag> 
+  <namecode /> 
+  <name>通道闸系统</name> 
+  <text>通道闸系统</text> 
+  <ntype>操作集组</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <scope /> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>905</serial> 
+  <level>2</level> 
+</rightsql>

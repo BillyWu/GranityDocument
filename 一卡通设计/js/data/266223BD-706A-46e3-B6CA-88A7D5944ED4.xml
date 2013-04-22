@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("7:1", "", "Use Case Model", "EARoot/EA7/EA91.htm", "180.png", "1", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("7.1", "1", "A：外部涉众", "EARoot/EA7/EA93.htm", "4.png", "", "", "{51AE181E-1FF8-4930-B104-DD5EBB9FAAA1}", "Package");
+tocTab[tocTab.length] = new Array("7.2", "1", "B：功能用例", "EARoot/EA7/EA94.htm", "4.png", "", "", "{55F441B7-781D-4f21-8665-58A6335ACCEE}", "Package");
+tocTab[tocTab.length] = new Array("7.3", "1", "C：用户界面", "EARoot/EA7/EA95.htm", "4.png", "", "", "{31E8EC39-CDC7-4ecb-BF1A-EE90BB50159F}", "Package");

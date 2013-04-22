@@ -1,0 +1,103 @@
+<rightsql>
+  <ID>12a2160b-783f-4552-8877-a693e3a28a58</ID> 
+  <PID>71996df9-7e5b-46aa-854f-94980c9beb15</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=用户管理集团,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>用户管理集团</name> 
+  <text>用户信息</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>97</serial> 
+  <level>4</level> 
+</rightsql>
+
+<rightsql>
+  <ID>ef25c9be-b12b-4670-abb2-d7bab3391c85</ID> 
+  <PID>71996df9-7e5b-46aa-854f-94980c9beb15</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=公司员工集团,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>公司员工集团</name> 
+  <text>公司员工</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>99</serial> 
+  <level>4</level> 
+</rightsql>
+
+<rightsql>
+  <ID>a220d5b9-220a-44ec-9db4-6b51872cec86</ID> 
+  <PID>71996df9-7e5b-46aa-854f-94980c9beb15</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=定义角色基本资料,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>定义角色基本资料</name> 
+  <text>角色定义</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>122</serial> 
+  <level>4</level> 
+</rightsql>
+
+<rightsql>
+  <ID>e2d6c58c-450e-4ba9-bf6c-59b88f2035bd</ID> 
+  <PID>71996df9-7e5b-46aa-854f-94980c9beb15</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=员工信息导入,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>员工信息导入</name> 
+  <text>员工信息导入</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>176</serial> 
+  <level>4</level> 
+</rightsql>
+
+
+<rightsql>
+  <ID>5e23cf45-2608-4ef4-ad9c-f7cc9913399c</ID> 
+  <PID>71996df9-7e5b-46aa-854f-94980c9beb15</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=修改密码,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>修改密码</name> 
+  <text>修改密码</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>217</serial> 
+  <level>4</level> 
+</rightsql>
+
+<rightsql>
+  <ID>859c6fdb-c1c3-4a10-af92-7225a0fd3965</ID> 
+  <PID>71996df9-7e5b-46aa-854f-94980c9beb15</PID> 
+  <ntag>@navitem=,@right=增删改,@scope=,@hide=0,@first=0,@code=,@name=员工信息查询,@type=基本操作集,@namecode=</ntag> 
+  <namecode /> 
+  <name>员工信息查询</name> 
+  <text>员工信息查询</text> 
+  <ntype>基本操作集</ntype> 
+  <alone>false</alone> 
+  <userright>增删改</userright> 
+  <scope /> 
+  <first>false</first> 
+  <hide>false</hide> 
+  <navitem /> 
+  <serial>891</serial> 
+  <level>4</level> 
+</rightsql>

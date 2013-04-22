@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("6:1", "", "文件传输", "EARoot/EA6/EA81.htm", "175.png", "8", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("6:3", "", "CmdFileTrans", "EARoot/EA6/EA85.htm", "5.png", "88", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:4", "", "CommiServerTCP", "EARoot/EA6/EA86.htm", "5.png", "90", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:5", "", "Protocol", "EARoot/EA6/EA87.htm", "5.png", "89", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:6", "", "ServerBase", "EARoot/EA6/EA88.htm", "5.png", "93", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:7", "", "SvrFileTrans", "EARoot/EA6/EA89.htm", "5.png", "95", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:2", "", "svrFileTrans", "EARoot/EA6/EA83.htm", "185.png", "9", "90", "", "Sequence diagram");
+tocTab[tocTab.length] = new Array("6:8", "", ": CommiServerTCP", "EARoot/EA6/EA90.htm", "25.png", "92", "90", "", "Object");

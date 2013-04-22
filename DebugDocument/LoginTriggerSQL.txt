@@ -1,0 +1,53 @@
+--login site successfully
+--execute dbo.[proc_sys_用户登录基本信息结构]
+--工号	帐号	登录时间	离线时间	登录IP	姓名	销售部门	部门	部门编号	部门ID	分部门	分部门编号	分部门ID	公司	单位	单位编号	单位ID	角色	公网访问	限制天数	上级单位	上级部门	权限文件	权限类别
+--				2013-03-28 10:54:15.903	2013-03-28 10:54:15.903	localhost	匿名		部门			分部门			公司	单位			角色	0	0				
+
+--exec sp_executesql N'execute proc_sys_人员基本信息 @userid',N'@userid varchar(50)',@userid='root'
+--帐号	姓名	工号	角色	公网访问	公司	单位	单位ID	单位编号	部门	部门ID	部门编号	分部门	分部门ID	分部门编号	单位独立管理	部门独立管理	分部门独立管理	限制天数	权限类别
+--root	SYSTEM_User	1	系统管理员	1	Granity	Granity	1D2EC7D2-9932-4022-8305-70E12E35C103	18830	Granity	1D2EC7D2-9932-4022-8305-70E12E35C103	18830	NULL	NULL	NULL	1	NULL	NULL	0	
+
+--exec sp_executesql N'EXECUTE [SmartCardsys].[dbo].[proc_readright] @role,@deptcode',N'@deptcode varchar(50),@role varchar(50)',@deptcode='18830',@role='系统管理员'
+--exec sp_executesql N'execute [dbo].[proc_sys_上级部门] @DeptCode',N'@DeptCode varchar(50)',@DeptCode='18830'
+--code	名称
+--18830	Granity
+
+--exec sp_executesql N'execute [dbo].[proc_sys_销售部门] @DeptCode',N'@DeptCode varchar(50)',@DeptCode='18830'
+--exec sp_executesql N'execute [dbo].[proc_sys_上级部门] @UnitCode',N'@UnitCode varchar(50)',@UnitCode=NULL
+
+--exec sp_executesql N'exec ValidatePassword @userid,@密码',N'@userid varchar(50),@密码 varchar(20)',@userid='root',@密码='abcd123'
+--帐号	密码
+--root	0x79CFEB94595DE33B3326C06AB1C7DBDA
+
+--exec sp_executesql N'EXECUTE [SmartCardsys].[dbo].[proc_readright] @role,@deptcode',N'@deptcode varchar(50),@role varchar(50)',@deptcode='18830',@role='系统管理员'
+--exec sp_executesql N'EXECUTE [SmartCardsys].[dbo].[proc_readright] @role,@deptcode',N'@deptcode varchar(50),@role varchar(50)',@deptcode='18830',@role='系统管理员'
+--exec SmartCardsys.dbo.navmenu "cd81d881-ca09-41eb-b46d-4ea6e4147705"
+--exec SmartCardsys.dbo.navmenu "cd81d881-ca09-41eb-b46d-4ea6e4147705"
+--select sysstr from 系统配置表 where name='菜单导航'
+
+--click 卡务中心
+--exec SmartCardsys.dbo.navmenu "68dab3bc-a8df-4a2a-97a2-c4d1b840fb9f"
+
+--click 发行管理
+--select sysstr from 系统配置表 where name='发行管理'
+--select  top 1000 * from EmployList() where 1>0 and 卡号='' order by 状态,部门名称,姓名
+--exec sp_executesql N'select '''' 卡片序列号,'''' 卡号,'''' RF卡号,'''' 用户编号,'''' 姓名,'''' 部门,0.0 卡片余额,0.0 补助余额,'''' 状态, 
+--     getdate() E日期,Dateadd(year,50,getdate()) E有效日期,4 E卡类号,''就餐卡'' E卡类, 
+--     getdate() D日期, Dateadd(year,50,getdate()) D有效日期,3 D卡类号,''用户卡'' D卡类,0 D时段,'''' D时段名称,
+--     getdate() P日期, Dateadd(year,50,getdate()) P有效日期,5 P卡类号,''临时卡'' P卡类,0 时段1,0 时段2,
+--     '''' 时段名称1,'''' 时段名称2,'''' 车牌,3 车型号,''C类车'' 车型,convert(bit,1) 自卸, 456.123 自重,
+--       '''' 门禁, '''' 消费, '''' 停车场,@UserAccounts 操作员,'''' 备注, '''' 卡片SN,
+--       '''' 道闸 ,getdate() Z日期,Dateadd(year,50,getdate()) Z有效日期,''用户卡'' Z卡类,0 Z时段,'''' Z时段名称, 3 Z卡类号 
+
+--exec sp_executesql N'select top 1 * 
+--from 通讯设备
+--where 通讯协议=@通讯协议 and (IP地址=@LocalIP or 电脑=@Localhost)
+--',N'@通讯协议 varchar(20),@LocalIP varchar(20),@Localhost varchar(20)',@通讯协议='发行器',@LocalIP='192.168.1.122',@Localhost='TEST'
+
+--execute 通讯参数设置 '卡务中心','联机'
+--execute 通讯参数设置 '卡务中心','防冲突'
+--execute 通讯参数设置 '卡务中心','读卡'
+--execute 通讯参数设置 '卡务中心','卡片停机'
+--execute 通讯参数设置 '卡务中心','脱机'
+--execute 通讯参数设置 '卡务中心','蜂鸣'
+--execute 通讯参数设置 '卡务中心','选择卡'

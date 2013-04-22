@@ -1,0 +1,2911 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Granity.communications::CommiManager</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">CommiManager  : public   class</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">2012-5-15 11:32:34</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">2012-5-15 11:32:34</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Administrator</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{4B7DEA96-2A2A-4586-9D62-D99538664AF3}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA28.htm">Granity.communications</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">通讯管理,提供通讯的统一接口,封装大容量通讯,支持多线程<br /><br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('Operations');" id="OperationsTitle">Operations</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="40%" class="TableHeading">Attribute</td>
+			<td width="60%" class="TableHeading">Details</td>
+		</tr>
+						<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private static Encoding</i><br /><strong>&nbsp;&nbsp;encodGB2312</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> Encoding.GetEncoding("GB2312")<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			GB2312编码器&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private List<CommiEntity></i><br /><strong>&nbsp;&nbsp;entityList</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new List<CommiEntity>()<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			通讯目标参数列表,添加项需要多线程同步处理&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private List<ClientEntity<Socket>></i><br /><strong>&nbsp;&nbsp;clientTcptList</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new List<ClientEntity<Socket>>()<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			TCP通讯缓存,在通讯异常时可重复使用,空闲过多时可关闭删除释放缓存&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private List<ClientEntity<UdpClient>></i><br /><strong>&nbsp;&nbsp;clientUdpList</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new List<ClientEntity<UdpClient>>()<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			UDP通讯缓存,在通讯异常时可重复使用,空闲过多时可关闭删除释放缓存&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private List<ClientEntity<SerialPort>></i><br /><strong>&nbsp;&nbsp;clientSerList</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new List<ClientEntity<SerialPort>>()<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Ser串口通讯缓存,在通讯异常时可重复使用,空闲过多时可关闭删除释放缓存&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private static <a href="EA34.htm">CommiManager</a></i><br /><strong>&nbsp;&nbsp;globalmgr</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i>&nbsp;</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private static byte</i><br /><strong>&nbsp;&nbsp;beginXML</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> encodGB2312.GetBytes("<F")<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			自定义XML报文格式&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private List<ResponseEventArgs></i><br /><strong>&nbsp;&nbsp;argsHandle</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new List<ResponseEventArgs>()<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			指令事件参数列表&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private DateTime</i><br /><strong>&nbsp;&nbsp;dtRunHandle</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> DateTime.MinValue<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			是否正在执行指令事件&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private ManualResetEvent</i><br /><strong>&nbsp;&nbsp;argWh</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new ManualResetEvent(false)<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			同步执行指令事件&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private List<ResponseEventArgs></i><br /><strong>&nbsp;&nbsp;argsHdl</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new List<ResponseEventArgs>()<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			指令事件参数列表&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private DateTime</i><br /><strong>&nbsp;&nbsp;dtRunHdl</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> DateTime.MinValue<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			是否正在执行指令事件&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private ManualResetEvent</i><br /><strong>&nbsp;&nbsp;argHdlWh</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new ManualResetEvent(false)<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			同步执行指令事件&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private List<ResponseEventArgs></i><br /><strong>&nbsp;&nbsp;argsChannel</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new List<ResponseEventArgs>()<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			指令事件参数列表&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private DateTime</i><br /><strong>&nbsp;&nbsp;dtRunChannel</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> DateTime.MinValue<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			是否正在执行指令事件&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private ManualResetEvent</i><br /><strong>&nbsp;&nbsp;argWhChannel</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i><i>Initial:</i> new ManualResetEvent(false)<br></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			同步执行指令事件&lt;br /&gt;&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>
+		</table>
+</div><div class="ItemBody" id="OperationsTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="40%" class="TableHeading">Operation</td>
+			<td width="60%" class="TableHeading">Details</td>
+		</tr>
+						<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ResponseHandle</strong>():EventHandler<ResponseEventArgs>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;event&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			响应事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ErrorCommiHandle</strong>():EventHandler<ErrorCommiEventArgs>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;event&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			通讯异常事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ErrorOpenHandle</strong>():EventHandler<ErrorCommiEventArgs>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;event&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			通讯链路打开时异常事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ErrorWriteHandle</strong>():EventHandler<ErrorCommiEventArgs>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;event&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			通讯发送数据时异常事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ErrorReadHandle</strong>():EventHandler<ErrorCommiEventArgs>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;event&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			通讯接收数据时异常事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiManager</strong>():
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			实例构造函数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private static</i><br />
+					<strong>CommiManager</strong>():
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public static</i><br />
+					<strong>GlobalManager</strong>():<a href="EA34.htm">CommiManager</a>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;property&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>readonly=true</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			全局管理器
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>TestConnect</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{546C66AD-B23C-4a04-A8B5-8F73CBFC0E4C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{546C66AD-B23C-4a04-A8B5-8F73CBFC0E4C}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{546C66AD-B23C-4a04-A8B5-8F73CBFC0E4C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{546C66AD-B23C-4a04-A8B5-8F73CBFC0E4C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{546C66AD-B23C-4a04-A8B5-8F73CBFC0E4C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{546C66AD-B23C-4a04-A8B5-8F73CBFC0E4C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯目标</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			测试目标是否联通&lt;br /&gt;&lt;br /&gt;@returns 是否可连接通讯(或是否在线)
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SynchHandleSet</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{648E6AC0-FB5D-4d0e-A645-4521D50C87EF}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{648E6AC0-FB5D-4d0e-A645-4521D50C87EF}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{648E6AC0-FB5D-4d0e-A645-4521D50C87EF}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{648E6AC0-FB5D-4d0e-A645-4521D50C87EF}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{648E6AC0-FB5D-4d0e-A645-4521D50C87EF}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{648E6AC0-FB5D-4d0e-A645-4521D50C87EF}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">需要同步的通讯目标</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			触发同步事件，运行一个或多个线程同步继续
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ContainCommand</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{FADC0669-C562-460c-8ECF-99D4BE51C7E5}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{FADC0669-C562-460c-8ECF-99D4BE51C7E5}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{FADC0669-C562-460c-8ECF-99D4BE51C7E5}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FADC0669-C562-460c-8ECF-99D4BE51C7E5}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{FADC0669-C562-460c-8ECF-99D4BE51C7E5}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FADC0669-C562-460c-8ECF-99D4BE51C7E5}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标位置</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{66C9528E-2B00-46b5-AA48-491DCC926BEE}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{66C9528E-2B00-46b5-AA48-491DCC926BEE}" border="0" />cmd: <a href="EA32.htm">CommandBase</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{66C9528E-2B00-46b5-AA48-491DCC926BEE}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{66C9528E-2B00-46b5-AA48-491DCC926BEE}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{66C9528E-2B00-46b5-AA48-491DCC926BEE}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{66C9528E-2B00-46b5-AA48-491DCC926BEE}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯指令</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			在目标位置是否已经有指令&lt;br /&gt;&lt;br /&gt;@returns 
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SendCommand</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{B83D8097-648D-4158-A0F1-988248D0BA54}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B83D8097-648D-4158-A0F1-988248D0BA54}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B83D8097-648D-4158-A0F1-988248D0BA54}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B83D8097-648D-4158-A0F1-988248D0BA54}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B83D8097-648D-4158-A0F1-988248D0BA54}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B83D8097-648D-4158-A0F1-988248D0BA54}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标位置</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{5B74B731-006F-4fd6-B0EC-7192239BDC72}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5B74B731-006F-4fd6-B0EC-7192239BDC72}" border="0" />cmd: <a href="EA32.htm">CommandBase</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5B74B731-006F-4fd6-B0EC-7192239BDC72}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5B74B731-006F-4fd6-B0EC-7192239BDC72}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5B74B731-006F-4fd6-B0EC-7192239BDC72}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5B74B731-006F-4fd6-B0EC-7192239BDC72}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯指令</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			发送通讯命令,命令已经存在则重用不在加命令
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SendCommand</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{DBDC0CE4-52C1-49b9-89BD-6615D706A20D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{DBDC0CE4-52C1-49b9-89BD-6615D706A20D}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{DBDC0CE4-52C1-49b9-89BD-6615D706A20D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{DBDC0CE4-52C1-49b9-89BD-6615D706A20D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{DBDC0CE4-52C1-49b9-89BD-6615D706A20D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{DBDC0CE4-52C1-49b9-89BD-6615D706A20D}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标位置</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{2871BC3F-5445-451f-906B-5C193F1FDF6B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{2871BC3F-5445-451f-906B-5C193F1FDF6B}" border="0" />cmd: <a href="EA32.htm">CommandBase</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{2871BC3F-5445-451f-906B-5C193F1FDF6B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2871BC3F-5445-451f-906B-5C193F1FDF6B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{2871BC3F-5445-451f-906B-5C193F1FDF6B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2871BC3F-5445-451f-906B-5C193F1FDF6B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯指令</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{6AFD5FA8-082F-4039-B066-54697F2A3D9B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{6AFD5FA8-082F-4039-B066-54697F2A3D9B}" border="0" />reset: bool</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{6AFD5FA8-082F-4039-B066-54697F2A3D9B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6AFD5FA8-082F-4039-B066-54697F2A3D9B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{6AFD5FA8-082F-4039-B066-54697F2A3D9B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6AFD5FA8-082F-4039-B066-54697F2A3D9B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">是否时间重置</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			发送通讯命令,命令已经存在则重用不在加命令
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SendCommand</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{17BD5573-E325-4eff-AF15-2DE7AA36E02D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{17BD5573-E325-4eff-AF15-2DE7AA36E02D}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{17BD5573-E325-4eff-AF15-2DE7AA36E02D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{17BD5573-E325-4eff-AF15-2DE7AA36E02D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{17BD5573-E325-4eff-AF15-2DE7AA36E02D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{17BD5573-E325-4eff-AF15-2DE7AA36E02D}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯的目标位置</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{BF76E1EE-9951-49df-8268-A04D0081D587}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{BF76E1EE-9951-49df-8268-A04D0081D587}" border="0" />cmd: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{BF76E1EE-9951-49df-8268-A04D0081D587}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BF76E1EE-9951-49df-8268-A04D0081D587}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{BF76E1EE-9951-49df-8268-A04D0081D587}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BF76E1EE-9951-49df-8268-A04D0081D587}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯命令</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			发送通讯命令
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SendCommand</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{13FC419C-6994-4dab-8E31-05E1B59D9636}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{13FC419C-6994-4dab-8E31-05E1B59D9636}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{13FC419C-6994-4dab-8E31-05E1B59D9636}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{13FC419C-6994-4dab-8E31-05E1B59D9636}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{13FC419C-6994-4dab-8E31-05E1B59D9636}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{13FC419C-6994-4dab-8E31-05E1B59D9636}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯的目标位置</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{FA06A04A-DFF0-4cba-9A00-540AC747E406}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{FA06A04A-DFF0-4cba-9A00-540AC747E406}" border="0" />cmd: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{FA06A04A-DFF0-4cba-9A00-540AC747E406}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FA06A04A-DFF0-4cba-9A00-540AC747E406}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{FA06A04A-DFF0-4cba-9A00-540AC747E406}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FA06A04A-DFF0-4cba-9A00-540AC747E406}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯命令</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{D350E80A-E935-4dc0-B18D-ABCDFDFA171D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{D350E80A-E935-4dc0-B18D-ABCDFDFA171D}" border="0" />isHEX: bool</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{D350E80A-E935-4dc0-B18D-ABCDFDFA171D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D350E80A-E935-4dc0-B18D-ABCDFDFA171D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{D350E80A-E935-4dc0-B18D-ABCDFDFA171D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D350E80A-E935-4dc0-B18D-ABCDFDFA171D}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">是否16进制格式字符串</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			发送通讯命令
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>SendCommand</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{8933C96C-2EC9-4e9b-9168-3AD394DE06B8}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8933C96C-2EC9-4e9b-9168-3AD394DE06B8}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8933C96C-2EC9-4e9b-9168-3AD394DE06B8}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8933C96C-2EC9-4e9b-9168-3AD394DE06B8}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8933C96C-2EC9-4e9b-9168-3AD394DE06B8}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8933C96C-2EC9-4e9b-9168-3AD394DE06B8}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯目标位置</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{87718E34-BCDE-45ad-81FA-CB0903D8F97B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{87718E34-BCDE-45ad-81FA-CB0903D8F97B}" border="0" />cmd: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{87718E34-BCDE-45ad-81FA-CB0903D8F97B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{87718E34-BCDE-45ad-81FA-CB0903D8F97B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{87718E34-BCDE-45ad-81FA-CB0903D8F97B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{87718E34-BCDE-45ad-81FA-CB0903D8F97B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯指令字节</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			发送通讯指令
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>RemoveCommand</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{0FE21E71-3065-4a97-A7C7-F881DA73C21C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0FE21E71-3065-4a97-A7C7-F881DA73C21C}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0FE21E71-3065-4a97-A7C7-F881DA73C21C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0FE21E71-3065-4a97-A7C7-F881DA73C21C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0FE21E71-3065-4a97-A7C7-F881DA73C21C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0FE21E71-3065-4a97-A7C7-F881DA73C21C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯的目标位置</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{20CD1FD5-F33B-47a2-814A-00558A27DC3E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{20CD1FD5-F33B-47a2-814A-00558A27DC3E}" border="0" />cmd: <a href="EA32.htm">CommandBase</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{20CD1FD5-F33B-47a2-814A-00558A27DC3E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{20CD1FD5-F33B-47a2-814A-00558A27DC3E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{20CD1FD5-F33B-47a2-814A-00558A27DC3E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{20CD1FD5-F33B-47a2-814A-00558A27DC3E}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">要移除的指令</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			移除目标地址通讯的指定指令
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>RemoveCommand</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{BA3F6D5E-A0B7-45f4-B3B3-1B49219F1B29}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{BA3F6D5E-A0B7-45f4-B3B3-1B49219F1B29}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{BA3F6D5E-A0B7-45f4-B3B3-1B49219F1B29}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BA3F6D5E-A0B7-45f4-B3B3-1B49219F1B29}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{BA3F6D5E-A0B7-45f4-B3B3-1B49219F1B29}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BA3F6D5E-A0B7-45f4-B3B3-1B49219F1B29}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯的目标位置</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			移除目标地址通讯的所有指令
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ClearCommand</strong>():void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			清空放弃当前指令的执行
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ResetClient</strong>():void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			关闭重置通讯状态,需要在清空命令和关闭线程后执行
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>ClearBuffer</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{252A3E7B-5443-438f-8B37-27E50C9410EC}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{252A3E7B-5443-438f-8B37-27E50C9410EC}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{252A3E7B-5443-438f-8B37-27E50C9410EC}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{252A3E7B-5443-438f-8B37-27E50C9410EC}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{252A3E7B-5443-438f-8B37-27E50C9410EC}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{252A3E7B-5443-438f-8B37-27E50C9410EC}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯目标</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			清空接收响应的缓存,以及时清除有错误的缓存
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>getEntity</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{015B4F58-4845-42ce-A60F-60A45D16B40A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{015B4F58-4845-42ce-A60F-60A45D16B40A}" border="0" />target: <a href="EA36.htm">CommiTarget</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{015B4F58-4845-42ce-A60F-60A45D16B40A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{015B4F58-4845-42ce-A60F-60A45D16B40A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{015B4F58-4845-42ce-A60F-60A45D16B40A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{015B4F58-4845-42ce-A60F-60A45D16B40A}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">终端目标</div>
+</td>
+						</tr>
+					</table>
+):<a href="EA53.htm">CommiEntity</a>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			从缓存中找到通讯实例(包含一个TCP/UDP/SerialPort和指令列表及状态信息) 如果没有则创建一个新的实例并加入缓存中
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>getClient</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{33F369D7-22BD-44cb-9091-41A9FD921E9B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{33F369D7-22BD-44cb-9091-41A9FD921E9B}" border="0" />list: List<ClientEntity<T>></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{33F369D7-22BD-44cb-9091-41A9FD921E9B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{33F369D7-22BD-44cb-9091-41A9FD921E9B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{33F369D7-22BD-44cb-9091-41A9FD921E9B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{33F369D7-22BD-44cb-9091-41A9FD921E9B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">缓存列表</div>
+</td>
+						</tr>
+					</table>
+):ClientEntity<T>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>generic=<T>genericConstraints=where T:class</td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			从缓存中找到空闲的嵌套字(UDP使用同一个来通讯)&lt;br /&gt;&lt;br /&gt;@returns 返回可用的Client,没有空闲的就创建新的
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>openTCP</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{88C1E595-A929-4b61-96B3-060F4A5CF2C8}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{88C1E595-A929-4b61-96B3-060F4A5CF2C8}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{88C1E595-A929-4b61-96B3-060F4A5CF2C8}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{88C1E595-A929-4b61-96B3-060F4A5CF2C8}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{88C1E595-A929-4b61-96B3-060F4A5CF2C8}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{88C1E595-A929-4b61-96B3-060F4A5CF2C8}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标通讯实例</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			打开通讯,失败时置目标通讯为空闲&lt;br /&gt;&lt;br /&gt;@returns 是否打开连接
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>openSer</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{15F9C3D6-B3D5-4cc9-AF30-FD97B5CE22E4}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{15F9C3D6-B3D5-4cc9-AF30-FD97B5CE22E4}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{15F9C3D6-B3D5-4cc9-AF30-FD97B5CE22E4}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{15F9C3D6-B3D5-4cc9-AF30-FD97B5CE22E4}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{15F9C3D6-B3D5-4cc9-AF30-FD97B5CE22E4}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{15F9C3D6-B3D5-4cc9-AF30-FD97B5CE22E4}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标通讯实例</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			打开通讯,失败时置目标通讯为空闲&lt;br /&gt;&lt;br /&gt;@returns 是否打开连接
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>openUDP</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{86193C7B-3E11-4bce-A4C0-AA3433662815}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{86193C7B-3E11-4bce-A4C0-AA3433662815}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{86193C7B-3E11-4bce-A4C0-AA3433662815}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{86193C7B-3E11-4bce-A4C0-AA3433662815}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{86193C7B-3E11-4bce-A4C0-AA3433662815}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{86193C7B-3E11-4bce-A4C0-AA3433662815}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标通讯实例</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			打开通讯,失败时置目标通讯为空闲&lt;br /&gt;&lt;br /&gt;@returns 是否打开连接
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>closeTCP</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{88291D35-5469-4acf-AF38-FC75224385A9}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{88291D35-5469-4acf-AF38-FC75224385A9}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{88291D35-5469-4acf-AF38-FC75224385A9}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{88291D35-5469-4acf-AF38-FC75224385A9}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{88291D35-5469-4acf-AF38-FC75224385A9}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{88291D35-5469-4acf-AF38-FC75224385A9}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标通讯实例</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			关闭通讯并置目标通讯为空闲,异常时处理同步线程
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>closeTCP</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{7F44235F-6CA3-4191-9C7F-F709EA637DA2}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{7F44235F-6CA3-4191-9C7F-F709EA637DA2}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{7F44235F-6CA3-4191-9C7F-F709EA637DA2}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7F44235F-6CA3-4191-9C7F-F709EA637DA2}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{7F44235F-6CA3-4191-9C7F-F709EA637DA2}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7F44235F-6CA3-4191-9C7F-F709EA637DA2}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标通讯实例</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{30D18778-1F5A-44dd-8C36-1F8D94EA288C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{30D18778-1F5A-44dd-8C36-1F8D94EA288C}" border="0" />reopen: bool</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{30D18778-1F5A-44dd-8C36-1F8D94EA288C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{30D18778-1F5A-44dd-8C36-1F8D94EA288C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{30D18778-1F5A-44dd-8C36-1F8D94EA288C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{30D18778-1F5A-44dd-8C36-1F8D94EA288C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">是否重新打开</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			关闭通讯并置目标通讯为空闲,异常时处理同步线程
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>closeSer</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{F78D8D0A-9EDA-417d-BDE3-173C18EFDC76}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{F78D8D0A-9EDA-417d-BDE3-173C18EFDC76}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{F78D8D0A-9EDA-417d-BDE3-173C18EFDC76}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F78D8D0A-9EDA-417d-BDE3-173C18EFDC76}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{F78D8D0A-9EDA-417d-BDE3-173C18EFDC76}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F78D8D0A-9EDA-417d-BDE3-173C18EFDC76}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标通讯实例</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			关闭通讯并置目标通讯为空闲,异常时处理同步线程
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>closeUDP</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{AAE49C5B-956F-4845-8BF6-AA4743FE7F5D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{AAE49C5B-956F-4845-8BF6-AA4743FE7F5D}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{AAE49C5B-956F-4845-8BF6-AA4743FE7F5D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AAE49C5B-956F-4845-8BF6-AA4743FE7F5D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{AAE49C5B-956F-4845-8BF6-AA4743FE7F5D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AAE49C5B-956F-4845-8BF6-AA4743FE7F5D}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			关闭通讯,UDP通讯不需要关闭只置目标通讯为空闲,异常时处理同步线程
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>closeTCPSocket</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{58E224F2-AA32-4e32-AEE9-B944EE342EE4}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{58E224F2-AA32-4e32-AEE9-B944EE342EE4}" border="0" />client: ClientEntity<Socket></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{58E224F2-AA32-4e32-AEE9-B944EE342EE4}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{58E224F2-AA32-4e32-AEE9-B944EE342EE4}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{58E224F2-AA32-4e32-AEE9-B944EE342EE4}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{58E224F2-AA32-4e32-AEE9-B944EE342EE4}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			关闭Socket以重用
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>containState</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{0CFABB03-CB80-44c0-B6C0-418A02066786}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0CFABB03-CB80-44c0-B6C0-418A02066786}" border="0" />cmds: CommandBase[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0CFABB03-CB80-44c0-B6C0-418A02066786}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0CFABB03-CB80-44c0-B6C0-418A02066786}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0CFABB03-CB80-44c0-B6C0-418A02066786}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0CFABB03-CB80-44c0-B6C0-418A02066786}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">指令数组</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{2B0150CC-92AE-49e5-82EC-01F2E4DABBC1}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{2B0150CC-92AE-49e5-82EC-01F2E4DABBC1}" border="0" />state: <a href="EA31.htm">CmdState</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{2B0150CC-92AE-49e5-82EC-01F2E4DABBC1}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2B0150CC-92AE-49e5-82EC-01F2E4DABBC1}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{2B0150CC-92AE-49e5-82EC-01F2E4DABBC1}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2B0150CC-92AE-49e5-82EC-01F2E4DABBC1}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">指令状态</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			检查指令中是否有指定状态的指令&lt;br /&gt;&lt;br /&gt;@returns 是否包含指定指令的状态
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>containState</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{CC033616-6EA4-435c-86B4-E68DE944D3EC}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{CC033616-6EA4-435c-86B4-E68DE944D3EC}" border="0" />cmds: CommandBase[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{CC033616-6EA4-435c-86B4-E68DE944D3EC}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CC033616-6EA4-435c-86B4-E68DE944D3EC}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{CC033616-6EA4-435c-86B4-E68DE944D3EC}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CC033616-6EA4-435c-86B4-E68DE944D3EC}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">指令数组</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{A0EA8F7D-022E-42e0-84D1-49159182FC1C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A0EA8F7D-022E-42e0-84D1-49159182FC1C}" border="0" />ptl: <a href="EA44.htm">Protocol</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A0EA8F7D-022E-42e0-84D1-49159182FC1C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A0EA8F7D-022E-42e0-84D1-49159182FC1C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A0EA8F7D-022E-42e0-84D1-49159182FC1C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A0EA8F7D-022E-42e0-84D1-49159182FC1C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">协议</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{158E2A58-A0F8-4922-A91F-AAD8010C7AF7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{158E2A58-A0F8-4922-A91F-AAD8010C7AF7}" border="0" />data: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{158E2A58-A0F8-4922-A91F-AAD8010C7AF7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{158E2A58-A0F8-4922-A91F-AAD8010C7AF7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{158E2A58-A0F8-4922-A91F-AAD8010C7AF7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{158E2A58-A0F8-4922-A91F-AAD8010C7AF7}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">包含指令键值的字节指令数据</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{8BD941A5-42F6-4842-A796-5680C2A2D25C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8BD941A5-42F6-4842-A796-5680C2A2D25C}" border="0" />state: <a href="EA31.htm">CmdState</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8BD941A5-42F6-4842-A796-5680C2A2D25C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8BD941A5-42F6-4842-A796-5680C2A2D25C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8BD941A5-42F6-4842-A796-5680C2A2D25C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8BD941A5-42F6-4842-A796-5680C2A2D25C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">指令状态</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			检查指令中是否有指定状态的指令,只对指令数组中键值相同的指令做对比&lt;br /&gt;&lt;br /&gt;@returns 是否包含指定指令的状态
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>writeTCP</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{4DA4C545-5B76-4aaf-986B-A1A10E66B0DB}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{4DA4C545-5B76-4aaf-986B-A1A10E66B0DB}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4DA4C545-5B76-4aaf-986B-A1A10E66B0DB}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4DA4C545-5B76-4aaf-986B-A1A10E66B0DB}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{4DA4C545-5B76-4aaf-986B-A1A10E66B0DB}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4DA4C545-5B76-4aaf-986B-A1A10E66B0DB}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标通讯实例</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			异步写入TCP通讯数据,通过对当前状态writing的判断确保一个线程在写入指令数据
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>writeUDP</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{5D1350E5-47D3-47be-B03B-D831308429F7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5D1350E5-47D3-47be-B03B-D831308429F7}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5D1350E5-47D3-47be-B03B-D831308429F7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5D1350E5-47D3-47be-B03B-D831308429F7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5D1350E5-47D3-47be-B03B-D831308429F7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5D1350E5-47D3-47be-B03B-D831308429F7}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯目标实例</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			异步写入UDP通讯数据
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>writeSer</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{30A6BA6E-31C3-48ef-A979-0A6390E19C43}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{30A6BA6E-31C3-48ef-A979-0A6390E19C43}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{30A6BA6E-31C3-48ef-A979-0A6390E19C43}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{30A6BA6E-31C3-48ef-A979-0A6390E19C43}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{30A6BA6E-31C3-48ef-A979-0A6390E19C43}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{30A6BA6E-31C3-48ef-A979-0A6390E19C43}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯目标实例</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			异步写入Serial通讯数据
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>frameIndexOf</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{12A74AB1-4A79-44c4-8A75-042696D785CC}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{12A74AB1-4A79-44c4-8A75-042696D785CC}" border="0" />src: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{12A74AB1-4A79-44c4-8A75-042696D785CC}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{12A74AB1-4A79-44c4-8A75-042696D785CC}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{12A74AB1-4A79-44c4-8A75-042696D785CC}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{12A74AB1-4A79-44c4-8A75-042696D785CC}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">字节流</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{0558033F-7AE1-4e8c-A339-D9C45A0154E7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0558033F-7AE1-4e8c-A339-D9C45A0154E7}" border="0" />pos: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0558033F-7AE1-4e8c-A339-D9C45A0154E7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0558033F-7AE1-4e8c-A339-D9C45A0154E7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0558033F-7AE1-4e8c-A339-D9C45A0154E7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0558033F-7AE1-4e8c-A339-D9C45A0154E7}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">检查起点位置</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{EA00A952-3B05-4a27-9E01-C3936BA744C0}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{EA00A952-3B05-4a27-9E01-C3936BA744C0}" border="0" />frame: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{EA00A952-3B05-4a27-9E01-C3936BA744C0}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{EA00A952-3B05-4a27-9E01-C3936BA744C0}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{EA00A952-3B05-4a27-9E01-C3936BA744C0}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{EA00A952-3B05-4a27-9E01-C3936BA744C0}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">帧字节, 字节流分帧的字节分隔符</div>
+</td>
+						</tr>
+					</table>
+):int
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			获取帧包含标识字节的起点位置&lt;br /&gt;&lt;br /&gt;@returns 返回标识起点位置
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>frameEndIndex</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{90953BA7-736F-4fee-B5CB-8F4672F11C6B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{90953BA7-736F-4fee-B5CB-8F4672F11C6B}" border="0" />src: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{90953BA7-736F-4fee-B5CB-8F4672F11C6B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{90953BA7-736F-4fee-B5CB-8F4672F11C6B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{90953BA7-736F-4fee-B5CB-8F4672F11C6B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{90953BA7-736F-4fee-B5CB-8F4672F11C6B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">字节流</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{5DCF67C1-7A5B-4be0-A192-DB2D05706D0F}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5DCF67C1-7A5B-4be0-A192-DB2D05706D0F}" border="0" />pos: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5DCF67C1-7A5B-4be0-A192-DB2D05706D0F}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5DCF67C1-7A5B-4be0-A192-DB2D05706D0F}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5DCF67C1-7A5B-4be0-A192-DB2D05706D0F}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5DCF67C1-7A5B-4be0-A192-DB2D05706D0F}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{EE6D856F-B9F4-48da-97AD-590AD95B1FE6}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{EE6D856F-B9F4-48da-97AD-590AD95B1FE6}" border="0" />ptl: <a href="EA44.htm">Protocol</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{EE6D856F-B9F4-48da-97AD-590AD95B1FE6}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{EE6D856F-B9F4-48da-97AD-590AD95B1FE6}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{EE6D856F-B9F4-48da-97AD-590AD95B1FE6}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{EE6D856F-B9F4-48da-97AD-590AD95B1FE6}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯协议</div>
+</td>
+						</tr>
+					</table>
+):int
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			获取帧结束索引号,帧尾最后一位索引号&lt;br /&gt;&lt;br /&gt;@param =&quot;posstart&quot; 检查帧时的起点&lt;br /&gt;@returns 成功则返回所引号,不包含帧字节返回-1
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>joinToList</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{929B1404-C5DF-4ff6-B7FE-2059619549FF}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{929B1404-C5DF-4ff6-B7FE-2059619549FF}" border="0" />buffer: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{929B1404-C5DF-4ff6-B7FE-2059619549FF}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{929B1404-C5DF-4ff6-B7FE-2059619549FF}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{929B1404-C5DF-4ff6-B7FE-2059619549FF}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{929B1404-C5DF-4ff6-B7FE-2059619549FF}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">读取当前缓存字节流</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{62D9F10D-94B9-4ed0-AAE6-352676D8E47C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{62D9F10D-94B9-4ed0-AAE6-352676D8E47C}" border="0" />len: int</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{62D9F10D-94B9-4ed0-AAE6-352676D8E47C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{62D9F10D-94B9-4ed0-AAE6-352676D8E47C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{62D9F10D-94B9-4ed0-AAE6-352676D8E47C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{62D9F10D-94B9-4ed0-AAE6-352676D8E47C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">字节流数据长度</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{AE841EFF-C2EE-47ff-9DAC-458F92D70F86}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{AE841EFF-C2EE-47ff-9DAC-458F92D70F86}" border="0" />temp: byte[]</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{AE841EFF-C2EE-47ff-9DAC-458F92D70F86}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AE841EFF-C2EE-47ff-9DAC-458F92D70F86}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>inout</td>
+						</tr>
+						<tr id="param{AE841EFF-C2EE-47ff-9DAC-458F92D70F86}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AE841EFF-C2EE-47ff-9DAC-458F92D70F86}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">临时字节数组，或上次接收的不完整字节数组，或承接下次字节流的字节数组</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{71114BC9-E0F3-47f1-9EBC-F0929B4A998A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{71114BC9-E0F3-47f1-9EBC-F0929B4A998A}" border="0" />destlist: IList<byte[]></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{71114BC9-E0F3-47f1-9EBC-F0929B4A998A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{71114BC9-E0F3-47f1-9EBC-F0929B4A998A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{71114BC9-E0F3-47f1-9EBC-F0929B4A998A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{71114BC9-E0F3-47f1-9EBC-F0929B4A998A}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标字节数组列表</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{F7A1786C-C339-4f61-ACE5-E3519137A4FB}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{F7A1786C-C339-4f61-ACE5-E3519137A4FB}" border="0" />tpl: <a href="EA44.htm">Protocol</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{F7A1786C-C339-4f61-ACE5-E3519137A4FB}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F7A1786C-C339-4f61-ACE5-E3519137A4FB}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{F7A1786C-C339-4f61-ACE5-E3519137A4FB}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{F7A1786C-C339-4f61-ACE5-E3519137A4FB}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">协议定义</div>
+</td>
+						</tr>
+					</table>
+):IList<byte[]>
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			一帧分多次接收数据时，连接完整帧加入目标字节数组列表中,不完整帧放入临时上下文字节数组&lt;br /&gt;&lt;br /&gt;@returns 返回目标字节数组列表,如果参数没有定义列表则创建
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>readTCP</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{42AAB245-CBF5-47a2-A127-063DA67B0A72}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{42AAB245-CBF5-47a2-A127-063DA67B0A72}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{42AAB245-CBF5-47a2-A127-063DA67B0A72}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{42AAB245-CBF5-47a2-A127-063DA67B0A72}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{42AAB245-CBF5-47a2-A127-063DA67B0A72}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{42AAB245-CBF5-47a2-A127-063DA67B0A72}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯参数实例</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			使用TCP通讯监听读取数据,读取数据会触发响应事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>readUDP</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{3BFD032A-C6C1-41bd-B11F-FD76D55F3F11}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{3BFD032A-C6C1-41bd-B11F-FD76D55F3F11}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{3BFD032A-C6C1-41bd-B11F-FD76D55F3F11}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{3BFD032A-C6C1-41bd-B11F-FD76D55F3F11}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{3BFD032A-C6C1-41bd-B11F-FD76D55F3F11}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{3BFD032A-C6C1-41bd-B11F-FD76D55F3F11}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯参数实例</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			使用UDP通讯监听读取数据,读取数据会触发响应事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>readSer</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{D54B2B45-49ED-4eab-AD66-7378E30B2249}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{D54B2B45-49ED-4eab-AD66-7378E30B2249}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{D54B2B45-49ED-4eab-AD66-7378E30B2249}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D54B2B45-49ED-4eab-AD66-7378E30B2249}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{D54B2B45-49ED-4eab-AD66-7378E30B2249}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D54B2B45-49ED-4eab-AD66-7378E30B2249}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯参数实例</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			使用TCP通讯监听读取数据,读取数据会触发响应事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>raiseResponse</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{6C2E1848-C171-4306-B9B2-02A2FBB57686}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{6C2E1848-C171-4306-B9B2-02A2FBB57686}" border="0" />entity: <a href="EA53.htm">CommiEntity</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{6C2E1848-C171-4306-B9B2-02A2FBB57686}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6C2E1848-C171-4306-B9B2-02A2FBB57686}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{6C2E1848-C171-4306-B9B2-02A2FBB57686}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6C2E1848-C171-4306-B9B2-02A2FBB57686}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{7523B792-7297-4c06-B608-B74B5F584646}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{7523B792-7297-4c06-B608-B74B5F584646}" border="0" />arg: <a href="EA46.htm">ResponseEventArgs</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{7523B792-7297-4c06-B608-B74B5F584646}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7523B792-7297-4c06-B608-B74B5F584646}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{7523B792-7297-4c06-B608-B74B5F584646}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7523B792-7297-4c06-B608-B74B5F584646}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">触发响应事件参数</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			触发响应事件,超限自动移除,其他需调用者维护移除
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>raiseCmdHandle</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{DF0202C5-FA5A-44c8-85D0-B4EB99A9EC4A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{DF0202C5-FA5A-44c8-85D0-B4EB99A9EC4A}" border="0" />obj: object</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{DF0202C5-FA5A-44c8-85D0-B4EB99A9EC4A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{DF0202C5-FA5A-44c8-85D0-B4EB99A9EC4A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{DF0202C5-FA5A-44c8-85D0-B4EB99A9EC4A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{DF0202C5-FA5A-44c8-85D0-B4EB99A9EC4A}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			触发指令事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>raiseCmdHdl</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{E67A433B-5946-4431-A0A6-5176AA5864B8}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{E67A433B-5946-4431-A0A6-5176AA5864B8}" border="0" />obj: object</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{E67A433B-5946-4431-A0A6-5176AA5864B8}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E67A433B-5946-4431-A0A6-5176AA5864B8}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{E67A433B-5946-4431-A0A6-5176AA5864B8}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E67A433B-5946-4431-A0A6-5176AA5864B8}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			触发指令事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>raiseCmdChannel</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{E0582009-6111-4ddd-BB4C-2CA254557ED0}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{E0582009-6111-4ddd-BB4C-2CA254557ED0}" border="0" />obj: object</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{E0582009-6111-4ddd-BB4C-2CA254557ED0}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E0582009-6111-4ddd-BB4C-2CA254557ED0}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{E0582009-6111-4ddd-BB4C-2CA254557ED0}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E0582009-6111-4ddd-BB4C-2CA254557ED0}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			触发指令事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>raiseError</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{41546D19-41A0-4139-9130-315D9230A96E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{41546D19-41A0-4139-9130-315D9230A96E}" border="0" />arg: <a href="EA39.htm">ErrorCommiEventArgs</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{41546D19-41A0-4139-9130-315D9230A96E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{41546D19-41A0-4139-9130-315D9230A96E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{41546D19-41A0-4139-9130-315D9230A96E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{41546D19-41A0-4139-9130-315D9230A96E}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">引发异常的参数</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			触发异常事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>raiseErrorOpen</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{30960351-80EE-4843-807F-2BA2BCF012BC}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{30960351-80EE-4843-807F-2BA2BCF012BC}" border="0" />arg: <a href="EA39.htm">ErrorCommiEventArgs</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{30960351-80EE-4843-807F-2BA2BCF012BC}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{30960351-80EE-4843-807F-2BA2BCF012BC}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{30960351-80EE-4843-807F-2BA2BCF012BC}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{30960351-80EE-4843-807F-2BA2BCF012BC}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">引发异常的参数</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			触发异常事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>raiseErrorWrite</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{664DFB66-B1E9-49b4-A5D8-5CB64B006B5E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{664DFB66-B1E9-49b4-A5D8-5CB64B006B5E}" border="0" />arg: <a href="EA39.htm">ErrorCommiEventArgs</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{664DFB66-B1E9-49b4-A5D8-5CB64B006B5E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{664DFB66-B1E9-49b4-A5D8-5CB64B006B5E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{664DFB66-B1E9-49b4-A5D8-5CB64B006B5E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{664DFB66-B1E9-49b4-A5D8-5CB64B006B5E}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">引发异常的参数</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			触发异常事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>raiseErrorRead</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{184A7D5D-51EE-47f1-BBC4-8FF3C353BA86}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{184A7D5D-51EE-47f1-BBC4-8FF3C353BA86}" border="0" />arg: <a href="EA39.htm">ErrorCommiEventArgs</a></a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{184A7D5D-51EE-47f1-BBC4-8FF3C353BA86}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{184A7D5D-51EE-47f1-BBC4-8FF3C353BA86}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{184A7D5D-51EE-47f1-BBC4-8FF3C353BA86}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{184A7D5D-51EE-47f1-BBC4-8FF3C353BA86}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">引发异常的参数</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			触发异常事件
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+
+		</table>
+</div>		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA53.htm">CommiEntity</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Nesting</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA52.htm">ClientEntity</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Nesting</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA46.htm">ResponseEventArgs</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Dependency</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA39.htm">ErrorCommiEventArgs</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Dependency</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

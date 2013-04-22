@@ -1,0 +1,49 @@
+<D>
+	<PL t=\"P\">
+		<L t=\"Ts\">
+			<P n=\"RecordCount\" v=\"\" t=\"s\" pt=\"M\" />
+			<P n=\"Command\" v=\"TransParam\" t=\"s\" />
+			<P n=\"UnitName\" v=\"门禁开门记录\" t=\"s\" />
+		</L>
+		<L t=\"T\">
+			<P n=\"WorkItem\" v=\"门禁开门记录\" t=\"s\" />
+			<P n=\"UnitName\" v=\"门禁开门记录\" t=\"s\" />
+			<P n=\"Command\" v=\"QueryDict\" t=\"s\" />
+			<P n=\"DataItem\" v=\"门禁开门记录\" t=\"s\" />
+			<P n=\"DataSrcFile\" v=\"门禁开门记录\" t=\"s\" />
+			<P n=\"DictSrcFile\" v=\"\" t=\"s\" />
+			<P n=\"PageSize\" v=\"100\" t=\"s\" />
+			<P n=\"DictCol\" v=\"\" t=\"s\" />
+			<P n=\"FmtCol\" v=\"@时间=yyyy-MM-dd HH:MM+时间_格式\" t=\"s\" />
+			<P n=\"FilterData\" v=\"门禁开门分页\" t=\"s\" />
+		</L>
+		<L t=\"C\">
+			<P n=\"RecordCount\" v=\"0\" t=\"s\" pt=\"M\" />
+		</L></PL><PL t=\"S\">
+		<L t=\"D\">
+			<P n=\"StartDate\" v=\"2013-02-26\" t=\"d\" />
+			<P n=\"EndDate\" v=\"2013-03-26\" t=\"d\" />
+			<P n=\"UserAccounts\" v=\"root\" t=\"s\" />
+			<P n=\"UserSn\" v=\"\" t=\"s\" />
+			<P n=\"UserName\" v=\"SYSTEM_User\" t=\"s\" />
+			<P n=\"Company\" v=\"\" t=\"s\" />
+			<P n=\"OPTUnitID\" v=\"18830\" t=\"s\" />
+			<P n=\"UnitCode\" v=\"18830\" t=\"s\" />
+			<P n=\"DWName\" v=\"Granity\" t=\"s\" />
+			<P n=\"DWSupName\" v=\"\" t=\"s\" />
+			<P n=\"DeptSaleName\" v=\"Granity\" t=\"s\" />
+			<P n=\"DeptSupName\" v=\"Granity\" t=\"s\" />
+			<P n=\"DeptName\" v=\"Granity\" t=\"s\" />
+			<P n=\"DeptCode\" v=\"18830\" t=\"s\" />
+			<P n=\"Rights\" v=\"\" t=\"s\" />
+			<P n=\"syspath\" v=\"http://localhost:4205/WebApp/\" t=\"s\" />
+			<P n=\"LimitDays\" v=\"0\" t=\"i\" />
+		</L>
+	</PL>
+	<PL t=\"B\" n=\"门禁开门记录\">
+		<L t=\"C\">
+			<P n=\"FirstRow\" v=\"0\" t=\"s\" pt=\"M\" />
+			<P n=\"LastRow\" v=\"10\" t=\"s\" pt=\"M\" />
+		</L>
+	</PL>
+</D>

@@ -1,0 +1,2505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Granity.CommiServer::SynDeviceParam</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">SynDeviceParam  : public   class</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">2012-5-11 10:41:12</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">2012-5-11 10:41:27</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Administrator</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{236AB680-EE83-416e-904A-F7B180D78DA4}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA17.htm">Granity.CommiServer</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">同步设备参数,更新黑白名单和设备控制参数</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('Operations');" id="OperationsTitle">Operations</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="40%" class="TableHeading">Attribute</td>
+			<td width="60%" class="TableHeading">Details</td>
+		</tr>
+						<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private Timer</i><br /><strong>&nbsp;&nbsp;tmService</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			服务定时器
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private int</i><br /><strong>&nbsp;&nbsp;timeout</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			通讯超时，单位毫秒，默认800ms
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private bool</i><br /><strong>&nbsp;&nbsp;isRuning</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			当前是否正在执行
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private int</i><br /><strong>&nbsp;&nbsp;cnnout</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			通讯连接恢复超时，默认0不等待恢复连接
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private string</i><br /><strong>&nbsp;&nbsp;dbSrc</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			协议数据源
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>			<tr>
+				<td width="40%" class="TableRow" valign="top"><i>private QueryDataRes</i><br /><strong>&nbsp;&nbsp;query</strong></td>
+				<td width="60%" class="TableRow" valign="top"><i></i><div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			数据查询
+		</td>
+	</tr>
+</table></div>
+</td>
+			</tr>
+		</table>
+</div><div class="ItemBody" id="OperationsTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="40%" class="TableHeading">Operation</td>
+			<td width="60%" class="TableHeading">Details</td>
+		</tr>
+						<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>CommiDevice</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{886753A7-632D-41b8-99CF-9720B56050FE}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{886753A7-632D-41b8-99CF-9720B56050FE}" border="0" />tagdevcmds: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{886753A7-632D-41b8-99CF-9720B56050FE}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{886753A7-632D-41b8-99CF-9720B56050FE}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{886753A7-632D-41b8-99CF-9720B56050FE}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{886753A7-632D-41b8-99CF-9720B56050FE}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备ID和下载指令, tag格式, 其中指令以&quot;|&quot;分割</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			强制对设备做全部初始化和下载参数,更新黑白名单
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downCardALL</strong>():string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			更新所有设备黑白名单&lt;br /&gt;返回错误提示，无错误提示成功
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>sendCommand</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{594E4D38-A337-47d5-9D7A-5E676F1113D8}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{594E4D38-A337-47d5-9D7A-5E676F1113D8}" border="0" />tarsrv: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{594E4D38-A337-47d5-9D7A-5E676F1113D8}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{594E4D38-A337-47d5-9D7A-5E676F1113D8}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{594E4D38-A337-47d5-9D7A-5E676F1113D8}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{594E4D38-A337-47d5-9D7A-5E676F1113D8}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">服务器</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{83C61183-8BB6-4c46-8BC9-2B8A36AF5457}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{83C61183-8BB6-4c46-8BC9-2B8A36AF5457}" border="0" />trans: CmdFileTrans</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{83C61183-8BB6-4c46-8BC9-2B8A36AF5457}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{83C61183-8BB6-4c46-8BC9-2B8A36AF5457}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{83C61183-8BB6-4c46-8BC9-2B8A36AF5457}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{83C61183-8BB6-4c46-8BC9-2B8A36AF5457}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输实例</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{D9132103-F153-45c4-A4F4-575144B49AA3}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{D9132103-F153-45c4-A4F4-575144B49AA3}" border="0" />proxy: IPAddress</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{D9132103-F153-45c4-A4F4-575144B49AA3}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D9132103-F153-45c4-A4F4-575144B49AA3}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{D9132103-F153-45c4-A4F4-575144B49AA3}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D9132103-F153-45c4-A4F4-575144B49AA3}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备代理电脑IP地址</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{A0804E9A-1CDD-4efb-90B6-C83728C599A2}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A0804E9A-1CDD-4efb-90B6-C83728C599A2}" border="0" />dest: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A0804E9A-1CDD-4efb-90B6-C83728C599A2}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A0804E9A-1CDD-4efb-90B6-C83728C599A2}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A0804E9A-1CDD-4efb-90B6-C83728C599A2}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A0804E9A-1CDD-4efb-90B6-C83728C599A2}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备目标</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{10DD297E-E56B-4718-9414-329B1726D908}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{10DD297E-E56B-4718-9414-329B1726D908}" border="0" />cmdP: CmdProtocol</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{10DD297E-E56B-4718-9414-329B1726D908}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{10DD297E-E56B-4718-9414-329B1726D908}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{10DD297E-E56B-4718-9414-329B1726D908}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{10DD297E-E56B-4718-9414-329B1726D908}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">指令实例</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{8D245287-5ED3-4c6e-A01B-B6C1CA18C8F1}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8D245287-5ED3-4c6e-A01B-B6C1CA18C8F1}" border="0" />tpl: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8D245287-5ED3-4c6e-A01B-B6C1CA18C8F1}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8D245287-5ED3-4c6e-A01B-B6C1CA18C8F1}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8D245287-5ED3-4c6e-A01B-B6C1CA18C8F1}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8D245287-5ED3-4c6e-A01B-B6C1CA18C8F1}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">协议名称</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{174505E7-0F3D-4c5c-BC51-7ACE8D193633}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{174505E7-0F3D-4c5c-BC51-7ACE8D193633}" border="0" />cmd: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{174505E7-0F3D-4c5c-BC51-7ACE8D193633}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{174505E7-0F3D-4c5c-BC51-7ACE8D193633}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{174505E7-0F3D-4c5c-BC51-7ACE8D193633}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{174505E7-0F3D-4c5c-BC51-7ACE8D193633}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">指令名称</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{209E9419-E29F-458f-B444-D499FB510AEE}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{209E9419-E29F-458f-B444-D499FB510AEE}" border="0" />tagdata: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{209E9419-E29F-458f-B444-D499FB510AEE}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{209E9419-E29F-458f-B444-D499FB510AEE}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{209E9419-E29F-458f-B444-D499FB510AEE}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{209E9419-E29F-458f-B444-D499FB510AEE}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">指令数据 tag格式</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			中转执行指令
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>getResponse</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{89242DAE-9CA3-4a26-9529-CF49B78B14D1}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{89242DAE-9CA3-4a26-9529-CF49B78B14D1}" border="0" />tarsrv: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{89242DAE-9CA3-4a26-9529-CF49B78B14D1}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{89242DAE-9CA3-4a26-9529-CF49B78B14D1}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{89242DAE-9CA3-4a26-9529-CF49B78B14D1}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{89242DAE-9CA3-4a26-9529-CF49B78B14D1}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{7F6CA34A-D118-4975-9386-D2ADDF319E02}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{7F6CA34A-D118-4975-9386-D2ADDF319E02}" border="0" />trans: CmdFileTrans</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{7F6CA34A-D118-4975-9386-D2ADDF319E02}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7F6CA34A-D118-4975-9386-D2ADDF319E02}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{7F6CA34A-D118-4975-9386-D2ADDF319E02}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{7F6CA34A-D118-4975-9386-D2ADDF319E02}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{44065877-A450-47b3-B8A4-410D57B8D00F}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{44065877-A450-47b3-B8A4-410D57B8D00F}" border="0" />proxy: IPAddress</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{44065877-A450-47b3-B8A4-410D57B8D00F}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{44065877-A450-47b3-B8A4-410D57B8D00F}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{44065877-A450-47b3-B8A4-410D57B8D00F}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{44065877-A450-47b3-B8A4-410D57B8D00F}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{5FB170EA-85F8-4f5d-839E-50878BD3B8E0}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5FB170EA-85F8-4f5d-839E-50878BD3B8E0}" border="0" />dest: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5FB170EA-85F8-4f5d-839E-50878BD3B8E0}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5FB170EA-85F8-4f5d-839E-50878BD3B8E0}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5FB170EA-85F8-4f5d-839E-50878BD3B8E0}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5FB170EA-85F8-4f5d-839E-50878BD3B8E0}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{FCF35954-CC6F-4288-8889-3F3C0E5DCC45}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{FCF35954-CC6F-4288-8889-3F3C0E5DCC45}" border="0" />cmdP: CmdProtocol</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{FCF35954-CC6F-4288-8889-3F3C0E5DCC45}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FCF35954-CC6F-4288-8889-3F3C0E5DCC45}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{FCF35954-CC6F-4288-8889-3F3C0E5DCC45}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FCF35954-CC6F-4288-8889-3F3C0E5DCC45}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{9BDF9441-D5F7-42db-9C30-DEB05DDB01CD}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{9BDF9441-D5F7-42db-9C30-DEB05DDB01CD}" border="0" />tpl: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{9BDF9441-D5F7-42db-9C30-DEB05DDB01CD}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{9BDF9441-D5F7-42db-9C30-DEB05DDB01CD}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{9BDF9441-D5F7-42db-9C30-DEB05DDB01CD}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{9BDF9441-D5F7-42db-9C30-DEB05DDB01CD}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{8435A008-F3DE-4383-ADA7-DD4612FD7D9B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{8435A008-F3DE-4383-ADA7-DD4612FD7D9B}" border="0" />cmd: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{8435A008-F3DE-4383-ADA7-DD4612FD7D9B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8435A008-F3DE-4383-ADA7-DD4612FD7D9B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{8435A008-F3DE-4383-ADA7-DD4612FD7D9B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{8435A008-F3DE-4383-ADA7-DD4612FD7D9B}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{1A0144A2-0190-4cdd-84D2-3599C232695C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{1A0144A2-0190-4cdd-84D2-3599C232695C}" border="0" />tagdata: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{1A0144A2-0190-4cdd-84D2-3599C232695C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1A0144A2-0190-4cdd-84D2-3599C232695C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{1A0144A2-0190-4cdd-84D2-3599C232695C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1A0144A2-0190-4cdd-84D2-3599C232695C}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			中转执行指令，返回响应结果
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>testConnect</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{0559D250-1CCB-4ed2-A9BB-8295DDC2ACE0}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0559D250-1CCB-4ed2-A9BB-8295DDC2ACE0}" border="0" />tarsrv: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0559D250-1CCB-4ed2-A9BB-8295DDC2ACE0}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0559D250-1CCB-4ed2-A9BB-8295DDC2ACE0}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0559D250-1CCB-4ed2-A9BB-8295DDC2ACE0}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0559D250-1CCB-4ed2-A9BB-8295DDC2ACE0}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">中转服务目标，在串口时可转发通讯</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{A64DE4C2-E1A9-43ee-85BC-765AA3836E3D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A64DE4C2-E1A9-43ee-85BC-765AA3836E3D}" border="0" />dest: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A64DE4C2-E1A9-43ee-85BC-765AA3836E3D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A64DE4C2-E1A9-43ee-85BC-765AA3836E3D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A64DE4C2-E1A9-43ee-85BC-765AA3836E3D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A64DE4C2-E1A9-43ee-85BC-765AA3836E3D}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯目标</div>
+</td>
+						</tr>
+					</table>
+):void
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			检查通讯目标是否可连接
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>Ping</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{E8D714AE-4022-472b-970F-772D2FEB5DEF}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{E8D714AE-4022-472b-970F-772D2FEB5DEF}" border="0" />dest: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{E8D714AE-4022-472b-970F-772D2FEB5DEF}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E8D714AE-4022-472b-970F-772D2FEB5DEF}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{E8D714AE-4022-472b-970F-772D2FEB5DEF}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E8D714AE-4022-472b-970F-772D2FEB5DEF}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">通讯目标</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			检查通讯目标是否可连接
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>commiDevicePark</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{0DA5AED8-342F-43f9-85B1-F20E9B87D503}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0DA5AED8-342F-43f9-85B1-F20E9B87D503}" border="0" />tarsrv: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0DA5AED8-342F-43f9-85B1-F20E9B87D503}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0DA5AED8-342F-43f9-85B1-F20E9B87D503}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0DA5AED8-342F-43f9-85B1-F20E9B87D503}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0DA5AED8-342F-43f9-85B1-F20E9B87D503}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">中转服务器</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{55DB8149-C920-43bd-B164-5322FD091B1B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{55DB8149-C920-43bd-B164-5322FD091B1B}" border="0" />trans: CmdFileTrans</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{55DB8149-C920-43bd-B164-5322FD091B1B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{55DB8149-C920-43bd-B164-5322FD091B1B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{55DB8149-C920-43bd-B164-5322FD091B1B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{55DB8149-C920-43bd-B164-5322FD091B1B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{E0C36507-EBCF-4772-9E34-A326108745CD}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{E0C36507-EBCF-4772-9E34-A326108745CD}" border="0" />proxy: IPAddress</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{E0C36507-EBCF-4772-9E34-A326108745CD}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E0C36507-EBCF-4772-9E34-A326108745CD}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{E0C36507-EBCF-4772-9E34-A326108745CD}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E0C36507-EBCF-4772-9E34-A326108745CD}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备通讯代理电脑IP地址</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{AA8380BE-734D-44e4-B6EF-C68B580BC378}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{AA8380BE-734D-44e4-B6EF-C68B580BC378}" border="0" />dest: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{AA8380BE-734D-44e4-B6EF-C68B580BC378}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AA8380BE-734D-44e4-B6EF-C68B580BC378}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{AA8380BE-734D-44e4-B6EF-C68B580BC378}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AA8380BE-734D-44e4-B6EF-C68B580BC378}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标设备</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{1F0990D8-12E8-41d5-AB6B-464B31816B2D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{1F0990D8-12E8-41d5-AB6B-464B31816B2D}" border="0" />drdevice: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{1F0990D8-12E8-41d5-AB6B-464B31816B2D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1F0990D8-12E8-41d5-AB6B-464B31816B2D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{1F0990D8-12E8-41d5-AB6B-464B31816B2D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1F0990D8-12E8-41d5-AB6B-464B31816B2D}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备信息记录行</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{5C6940CE-5766-49bd-BD90-4A056958FB0A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5C6940CE-5766-49bd-BD90-4A056958FB0A}" border="0" />attrcmd: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5C6940CE-5766-49bd-BD90-4A056958FB0A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5C6940CE-5766-49bd-BD90-4A056958FB0A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5C6940CE-5766-49bd-BD90-4A056958FB0A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5C6940CE-5766-49bd-BD90-4A056958FB0A}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">执行指令</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;park&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			停车场设备初始化和下载参数,更新黑白名单
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downparkCardList</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{3F6E95F0-0855-4d58-9670-5ABE96F3AB2E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{3F6E95F0-0855-4d58-9670-5ABE96F3AB2E}" border="0" />arg: TransArg</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{3F6E95F0-0855-4d58-9670-5ABE96F3AB2E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{3F6E95F0-0855-4d58-9670-5ABE96F3AB2E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{3F6E95F0-0855-4d58-9670-5ABE96F3AB2E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{3F6E95F0-0855-4d58-9670-5ABE96F3AB2E}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令参数</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;park&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			更新设备的黑白清名单,执行成功后更新黑白名单下载日期
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downPayRule</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{74B54DC6-2655-4018-B421-EA3BCE709A70}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{74B54DC6-2655-4018-B421-EA3BCE709A70}" border="0" />arg: TransArg</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{74B54DC6-2655-4018-B421-EA3BCE709A70}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{74B54DC6-2655-4018-B421-EA3BCE709A70}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{74B54DC6-2655-4018-B421-EA3BCE709A70}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{74B54DC6-2655-4018-B421-EA3BCE709A70}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令参数</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;park&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			更新设备的黑白清名单,执行成功后更新黑白名单下载日期
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getctrlpm</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{35C66926-448B-47f8-8F6F-8AA64B8B38EC}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{35C66926-448B-47f8-8F6F-8AA64B8B38EC}" border="0" />dr: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{35C66926-448B-47f8-8F6F-8AA64B8B38EC}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{35C66926-448B-47f8-8F6F-8AA64B8B38EC}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{35C66926-448B-47f8-8F6F-8AA64B8B38EC}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{35C66926-448B-47f8-8F6F-8AA64B8B38EC}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">记录行</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{99598506-D9EC-4930-9F5A-39AF81B9522E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{99598506-D9EC-4930-9F5A-39AF81B9522E}" border="0" />addrst: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{99598506-D9EC-4930-9F5A-39AF81B9522E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{99598506-D9EC-4930-9F5A-39AF81B9522E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{99598506-D9EC-4930-9F5A-39AF81B9522E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{99598506-D9EC-4930-9F5A-39AF81B9522E}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">站址</div>
+</td>
+						</tr>
+					</table>
+):string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;park&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			从行记录获取tag格式控制参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getpaypm1</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{4708324A-B901-41e6-AF17-FFA6DADAA839}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{4708324A-B901-41e6-AF17-FFA6DADAA839}" border="0" />drpay: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4708324A-B901-41e6-AF17-FFA6DADAA839}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4708324A-B901-41e6-AF17-FFA6DADAA839}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{4708324A-B901-41e6-AF17-FFA6DADAA839}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4708324A-B901-41e6-AF17-FFA6DADAA839}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">计费标准记录</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{FA889E9A-84B6-4c38-AB6B-591CC91F1BA5}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{FA889E9A-84B6-4c38-AB6B-591CC91F1BA5}" border="0" />tabdetail: DataTable</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{FA889E9A-84B6-4c38-AB6B-591CC91F1BA5}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FA889E9A-84B6-4c38-AB6B-591CC91F1BA5}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{FA889E9A-84B6-4c38-AB6B-591CC91F1BA5}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FA889E9A-84B6-4c38-AB6B-591CC91F1BA5}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">标准规则明细</div>
+</td>
+						</tr>
+					</table>
+):string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;park&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			收费标准1 tag格式参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getpaypm2</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{89CF5AA6-172A-456f-924C-AB19E04A93C1}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{89CF5AA6-172A-456f-924C-AB19E04A93C1}" border="0" />drpay: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{89CF5AA6-172A-456f-924C-AB19E04A93C1}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{89CF5AA6-172A-456f-924C-AB19E04A93C1}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{89CF5AA6-172A-456f-924C-AB19E04A93C1}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{89CF5AA6-172A-456f-924C-AB19E04A93C1}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">计费标准记录</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{0A94CD92-CD7E-44b7-93F4-6035A817F342}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0A94CD92-CD7E-44b7-93F4-6035A817F342}" border="0" />tabdetail: DataTable</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0A94CD92-CD7E-44b7-93F4-6035A817F342}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0A94CD92-CD7E-44b7-93F4-6035A817F342}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0A94CD92-CD7E-44b7-93F4-6035A817F342}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0A94CD92-CD7E-44b7-93F4-6035A817F342}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">标准规则明细</div>
+</td>
+						</tr>
+					</table>
+):string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;park&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			收费标准2 tag格式参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getpaypm3</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{718074BE-77CD-4d34-97BA-932219B2F69F}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{718074BE-77CD-4d34-97BA-932219B2F69F}" border="0" />drpay: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{718074BE-77CD-4d34-97BA-932219B2F69F}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{718074BE-77CD-4d34-97BA-932219B2F69F}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{718074BE-77CD-4d34-97BA-932219B2F69F}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{718074BE-77CD-4d34-97BA-932219B2F69F}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">计费标准记录</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{005F1120-950A-40a7-AFB3-AF9BC81DA07F}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{005F1120-950A-40a7-AFB3-AF9BC81DA07F}" border="0" />tabdetail: DataTable</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{005F1120-950A-40a7-AFB3-AF9BC81DA07F}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{005F1120-950A-40a7-AFB3-AF9BC81DA07F}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{005F1120-950A-40a7-AFB3-AF9BC81DA07F}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{005F1120-950A-40a7-AFB3-AF9BC81DA07F}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">标准规则明细</div>
+</td>
+						</tr>
+					</table>
+):string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;park&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			收费标准3 tag格式参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getpaypm4</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{4E88C471-7474-477f-9BA6-8A9A2F8AB6F1}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{4E88C471-7474-477f-9BA6-8A9A2F8AB6F1}" border="0" />drpay: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4E88C471-7474-477f-9BA6-8A9A2F8AB6F1}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4E88C471-7474-477f-9BA6-8A9A2F8AB6F1}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{4E88C471-7474-477f-9BA6-8A9A2F8AB6F1}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4E88C471-7474-477f-9BA6-8A9A2F8AB6F1}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">计费标准记录</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{83B977CA-9709-4bf8-994C-695C9CD3C461}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{83B977CA-9709-4bf8-994C-695C9CD3C461}" border="0" />tabdetail: DataTable</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{83B977CA-9709-4bf8-994C-695C9CD3C461}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{83B977CA-9709-4bf8-994C-695C9CD3C461}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{83B977CA-9709-4bf8-994C-695C9CD3C461}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{83B977CA-9709-4bf8-994C-695C9CD3C461}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">标准规则明细</div>
+</td>
+						</tr>
+					</table>
+):string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;park&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			收费标准4 tag格式参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getpaypm5</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{827D1DA5-651D-4cc0-9B2C-09469EF00EEE}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{827D1DA5-651D-4cc0-9B2C-09469EF00EEE}" border="0" />drpay: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{827D1DA5-651D-4cc0-9B2C-09469EF00EEE}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{827D1DA5-651D-4cc0-9B2C-09469EF00EEE}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{827D1DA5-651D-4cc0-9B2C-09469EF00EEE}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{827D1DA5-651D-4cc0-9B2C-09469EF00EEE}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">计费标准记录</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{4A2116E3-E9C9-42f3-B026-B8B0A40C0214}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{4A2116E3-E9C9-42f3-B026-B8B0A40C0214}" border="0" />tabdetail: DataTable</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4A2116E3-E9C9-42f3-B026-B8B0A40C0214}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4A2116E3-E9C9-42f3-B026-B8B0A40C0214}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{4A2116E3-E9C9-42f3-B026-B8B0A40C0214}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4A2116E3-E9C9-42f3-B026-B8B0A40C0214}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">标准规则明细</div>
+</td>
+						</tr>
+					</table>
+):string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;park&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			收费标准5 tag格式参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getpaypm6</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{526DCD69-E319-4b97-8AF2-374802B8D364}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{526DCD69-E319-4b97-8AF2-374802B8D364}" border="0" />drpay: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{526DCD69-E319-4b97-8AF2-374802B8D364}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{526DCD69-E319-4b97-8AF2-374802B8D364}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{526DCD69-E319-4b97-8AF2-374802B8D364}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{526DCD69-E319-4b97-8AF2-374802B8D364}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">计费标准记录</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{A834F327-07AC-482a-8705-2E5D3ADD11BE}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A834F327-07AC-482a-8705-2E5D3ADD11BE}" border="0" />tabdetail: DataTable</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A834F327-07AC-482a-8705-2E5D3ADD11BE}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A834F327-07AC-482a-8705-2E5D3ADD11BE}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A834F327-07AC-482a-8705-2E5D3ADD11BE}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A834F327-07AC-482a-8705-2E5D3ADD11BE}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">标准规则明细</div>
+</td>
+						</tr>
+					</table>
+):string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;park&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			收费标准6 tag格式参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>commiDeviceDoor</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{6ED607B9-2450-48be-8280-FCFC527E2728}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{6ED607B9-2450-48be-8280-FCFC527E2728}" border="0" />tarsrv: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{6ED607B9-2450-48be-8280-FCFC527E2728}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6ED607B9-2450-48be-8280-FCFC527E2728}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{6ED607B9-2450-48be-8280-FCFC527E2728}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6ED607B9-2450-48be-8280-FCFC527E2728}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">中转服务器</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{AA4A50C2-8D43-473a-A27E-6C7BEEF26132}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{AA4A50C2-8D43-473a-A27E-6C7BEEF26132}" border="0" />trans: CmdFileTrans</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{AA4A50C2-8D43-473a-A27E-6C7BEEF26132}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AA4A50C2-8D43-473a-A27E-6C7BEEF26132}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{AA4A50C2-8D43-473a-A27E-6C7BEEF26132}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{AA4A50C2-8D43-473a-A27E-6C7BEEF26132}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{B126EFA9-BC72-4e06-B619-8F93305C6028}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B126EFA9-BC72-4e06-B619-8F93305C6028}" border="0" />proxy: IPAddress</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B126EFA9-BC72-4e06-B619-8F93305C6028}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B126EFA9-BC72-4e06-B619-8F93305C6028}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B126EFA9-BC72-4e06-B619-8F93305C6028}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B126EFA9-BC72-4e06-B619-8F93305C6028}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备通讯代理电脑IP地址</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{2F6ACC4C-C70B-49cd-AB70-9173C0561AB8}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{2F6ACC4C-C70B-49cd-AB70-9173C0561AB8}" border="0" />dest: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{2F6ACC4C-C70B-49cd-AB70-9173C0561AB8}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2F6ACC4C-C70B-49cd-AB70-9173C0561AB8}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{2F6ACC4C-C70B-49cd-AB70-9173C0561AB8}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{2F6ACC4C-C70B-49cd-AB70-9173C0561AB8}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标设备</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{B527C9FB-2579-4203-9274-6448D33F6675}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{B527C9FB-2579-4203-9274-6448D33F6675}" border="0" />drdevice: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{B527C9FB-2579-4203-9274-6448D33F6675}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B527C9FB-2579-4203-9274-6448D33F6675}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{B527C9FB-2579-4203-9274-6448D33F6675}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{B527C9FB-2579-4203-9274-6448D33F6675}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备信息记录行</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{10388319-007F-4e06-9606-617885FBFB6C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{10388319-007F-4e06-9606-617885FBFB6C}" border="0" />attrcmd: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{10388319-007F-4e06-9606-617885FBFB6C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{10388319-007F-4e06-9606-617885FBFB6C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{10388319-007F-4e06-9606-617885FBFB6C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{10388319-007F-4e06-9606-617885FBFB6C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">执行指令</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;door&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			门禁设备初始化和下载参数,更新黑白名单
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getdoortime</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{50D07D37-265B-462c-BFDA-AB473258B2DB}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{50D07D37-265B-462c-BFDA-AB473258B2DB}" border="0" />drtime: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{50D07D37-265B-462c-BFDA-AB473258B2DB}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{50D07D37-265B-462c-BFDA-AB473258B2DB}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{50D07D37-265B-462c-BFDA-AB473258B2DB}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{50D07D37-265B-462c-BFDA-AB473258B2DB}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">时段记录</div>
+</td>
+						</tr>
+					</table>
+):string
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;door&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			门禁时段  tag格式参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downdoorCardList</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{1CFE69E9-AE5A-42fb-9794-9D62D2A1E94C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{1CFE69E9-AE5A-42fb-9794-9D62D2A1E94C}" border="0" />arg: TransArg</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{1CFE69E9-AE5A-42fb-9794-9D62D2A1E94C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1CFE69E9-AE5A-42fb-9794-9D62D2A1E94C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{1CFE69E9-AE5A-42fb-9794-9D62D2A1E94C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1CFE69E9-AE5A-42fb-9794-9D62D2A1E94C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令参数</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;door&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			更新设备的黑白清名单,执行成功后更新黑白名单下载日期
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downdoorctrlpm</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{431395DB-9040-4166-85F1-259858DA39BB}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{431395DB-9040-4166-85F1-259858DA39BB}" border="0" />arg: TransArg</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{431395DB-9040-4166-85F1-259858DA39BB}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{431395DB-9040-4166-85F1-259858DA39BB}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{431395DB-9040-4166-85F1-259858DA39BB}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{431395DB-9040-4166-85F1-259858DA39BB}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令参数</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;door&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			下载控制参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>commiDeviceChannel</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{95D28724-F5E4-46ab-92BC-DFC8F3D0A869}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{95D28724-F5E4-46ab-92BC-DFC8F3D0A869}" border="0" />tarsrv: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{95D28724-F5E4-46ab-92BC-DFC8F3D0A869}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{95D28724-F5E4-46ab-92BC-DFC8F3D0A869}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{95D28724-F5E4-46ab-92BC-DFC8F3D0A869}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{95D28724-F5E4-46ab-92BC-DFC8F3D0A869}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">中转服务器</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{A78A17AC-7CEE-46da-B203-2A989B3ED1B6}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A78A17AC-7CEE-46da-B203-2A989B3ED1B6}" border="0" />trans: CmdFileTrans</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A78A17AC-7CEE-46da-B203-2A989B3ED1B6}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A78A17AC-7CEE-46da-B203-2A989B3ED1B6}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A78A17AC-7CEE-46da-B203-2A989B3ED1B6}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A78A17AC-7CEE-46da-B203-2A989B3ED1B6}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{FA8F5104-9DAC-4c8d-ABC6-2697DCB306B4}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{FA8F5104-9DAC-4c8d-ABC6-2697DCB306B4}" border="0" />proxy: IPAddress</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{FA8F5104-9DAC-4c8d-ABC6-2697DCB306B4}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FA8F5104-9DAC-4c8d-ABC6-2697DCB306B4}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{FA8F5104-9DAC-4c8d-ABC6-2697DCB306B4}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FA8F5104-9DAC-4c8d-ABC6-2697DCB306B4}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备通讯代理电脑IP地址</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{CDB6F009-E5A9-4568-A264-68272C08EF06}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{CDB6F009-E5A9-4568-A264-68272C08EF06}" border="0" />dest: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{CDB6F009-E5A9-4568-A264-68272C08EF06}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CDB6F009-E5A9-4568-A264-68272C08EF06}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{CDB6F009-E5A9-4568-A264-68272C08EF06}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CDB6F009-E5A9-4568-A264-68272C08EF06}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标设备</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{0EBFE482-D8C8-466a-8923-1AF77029CC1A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{0EBFE482-D8C8-466a-8923-1AF77029CC1A}" border="0" />drdevice: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0EBFE482-D8C8-466a-8923-1AF77029CC1A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0EBFE482-D8C8-466a-8923-1AF77029CC1A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0EBFE482-D8C8-466a-8923-1AF77029CC1A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0EBFE482-D8C8-466a-8923-1AF77029CC1A}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备信息记录行</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{CBDCD05F-CAE8-4d3d-BD58-1B76B610B1C1}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{CBDCD05F-CAE8-4d3d-BD58-1B76B610B1C1}" border="0" />attrcmd: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{CBDCD05F-CAE8-4d3d-BD58-1B76B610B1C1}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CBDCD05F-CAE8-4d3d-BD58-1B76B610B1C1}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{CBDCD05F-CAE8-4d3d-BD58-1B76B610B1C1}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{CBDCD05F-CAE8-4d3d-BD58-1B76B610B1C1}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">执行指令</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;channel&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			道闸设备初始化和下载参数,更新黑白名单
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>getchanneltime</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{FBC12692-6EF1-4df4-B618-54442416ADC1}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{FBC12692-6EF1-4df4-B618-54442416ADC1}" border="0" />drtime: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{FBC12692-6EF1-4df4-B618-54442416ADC1}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FBC12692-6EF1-4df4-B618-54442416ADC1}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{FBC12692-6EF1-4df4-B618-54442416ADC1}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FBC12692-6EF1-4df4-B618-54442416ADC1}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">时段记录</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;channel&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			门禁时段  tag格式参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downchannelCardList</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{A95AA5B4-038A-415e-9B11-72DF4DC44646}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A95AA5B4-038A-415e-9B11-72DF4DC44646}" border="0" />arg: TransArg</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A95AA5B4-038A-415e-9B11-72DF4DC44646}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A95AA5B4-038A-415e-9B11-72DF4DC44646}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A95AA5B4-038A-415e-9B11-72DF4DC44646}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A95AA5B4-038A-415e-9B11-72DF4DC44646}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令参数</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;channel&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			更新设备的黑白清名单,执行成功后更新黑白名单下载日期
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downchannelctrlpm</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{32B851FB-B41A-4b04-B775-974BF996D49D}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{32B851FB-B41A-4b04-B775-974BF996D49D}" border="0" />arg: TransArg</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{32B851FB-B41A-4b04-B775-974BF996D49D}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{32B851FB-B41A-4b04-B775-974BF996D49D}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{32B851FB-B41A-4b04-B775-974BF996D49D}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{32B851FB-B41A-4b04-B775-974BF996D49D}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令参数</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;channel&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			下载控制参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>commiDeviceEatery</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{5B202E0E-552E-41ed-90FF-E68924FEEBE0}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{5B202E0E-552E-41ed-90FF-E68924FEEBE0}" border="0" />tarsrv: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{5B202E0E-552E-41ed-90FF-E68924FEEBE0}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5B202E0E-552E-41ed-90FF-E68924FEEBE0}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{5B202E0E-552E-41ed-90FF-E68924FEEBE0}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{5B202E0E-552E-41ed-90FF-E68924FEEBE0}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">中转服务器</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{C5A6E17F-FD9C-4e66-BECD-5F6568BD6013}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{C5A6E17F-FD9C-4e66-BECD-5F6568BD6013}" border="0" />trans: CmdFileTrans</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{C5A6E17F-FD9C-4e66-BECD-5F6568BD6013}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C5A6E17F-FD9C-4e66-BECD-5F6568BD6013}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{C5A6E17F-FD9C-4e66-BECD-5F6568BD6013}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C5A6E17F-FD9C-4e66-BECD-5F6568BD6013}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{339BEFF3-7D0A-4605-92A5-3727190DE0DA}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{339BEFF3-7D0A-4605-92A5-3727190DE0DA}" border="0" />proxy: IPAddress</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{339BEFF3-7D0A-4605-92A5-3727190DE0DA}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{339BEFF3-7D0A-4605-92A5-3727190DE0DA}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{339BEFF3-7D0A-4605-92A5-3727190DE0DA}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{339BEFF3-7D0A-4605-92A5-3727190DE0DA}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备通讯代理电脑IP地址</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{52FC828F-F595-4562-9A92-EB94C1A0C71E}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{52FC828F-F595-4562-9A92-EB94C1A0C71E}" border="0" />dest: CommiTarget</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{52FC828F-F595-4562-9A92-EB94C1A0C71E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{52FC828F-F595-4562-9A92-EB94C1A0C71E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{52FC828F-F595-4562-9A92-EB94C1A0C71E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{52FC828F-F595-4562-9A92-EB94C1A0C71E}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">目标设备</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{00E0678F-A05C-483d-857A-9E6A907DE4ED}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{00E0678F-A05C-483d-857A-9E6A907DE4ED}" border="0" />drdevice: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{00E0678F-A05C-483d-857A-9E6A907DE4ED}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{00E0678F-A05C-483d-857A-9E6A907DE4ED}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{00E0678F-A05C-483d-857A-9E6A907DE4ED}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{00E0678F-A05C-483d-857A-9E6A907DE4ED}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">设备信息记录行</div>
+</td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{A8D62016-193D-43d6-8C0C-59BC3A070ECF}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A8D62016-193D-43d6-8C0C-59BC3A070ECF}" border="0" />attrcmd: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A8D62016-193D-43d6-8C0C-59BC3A070ECF}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A8D62016-193D-43d6-8C0C-59BC3A070ECF}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A8D62016-193D-43d6-8C0C-59BC3A070ECF}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A8D62016-193D-43d6-8C0C-59BC3A070ECF}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">执行指令</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;eatery&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			消费设备初始化和下载参数,更新黑白名单
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downeateryCardList</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{1E3C9270-615D-4485-8339-C965A0B90034}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{1E3C9270-615D-4485-8339-C965A0B90034}" border="0" />arg: TransArg</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{1E3C9270-615D-4485-8339-C965A0B90034}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1E3C9270-615D-4485-8339-C965A0B90034}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{1E3C9270-615D-4485-8339-C965A0B90034}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1E3C9270-615D-4485-8339-C965A0B90034}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令参数</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;eatery&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			更新设备的黑白清名单,执行成功后更新黑白名单下载日期
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downeaterySubsidy</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{A34FA08C-8C4F-40c5-B9F3-40ABE835FED8}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A34FA08C-8C4F-40c5-B9F3-40ABE835FED8}" border="0" />arg: TransArg</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A34FA08C-8C4F-40c5-B9F3-40ABE835FED8}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A34FA08C-8C4F-40c5-B9F3-40ABE835FED8}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A34FA08C-8C4F-40c5-B9F3-40ABE835FED8}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A34FA08C-8C4F-40c5-B9F3-40ABE835FED8}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令参数</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;eatery&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			回收补助机没有下载的补助,清空补助后,合并到未下载补助一起下载
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downeateryctrlpm</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{6086DAA4-97BA-44d5-8C85-E208AF44A91C}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{6086DAA4-97BA-44d5-8C85-E208AF44A91C}" border="0" />arg: TransArg</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{6086DAA4-97BA-44d5-8C85-E208AF44A91C}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6086DAA4-97BA-44d5-8C85-E208AF44A91C}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{6086DAA4-97BA-44d5-8C85-E208AF44A91C}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6086DAA4-97BA-44d5-8C85-E208AF44A91C}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令参数</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;eatery&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			下载控制参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>public</i><br />
+					<strong>downeaterytime</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{D930350D-3257-4105-AE0F-9BD5DAA198A7}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{D930350D-3257-4105-AE0F-9BD5DAA198A7}" border="0" />arg: TransArg</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{D930350D-3257-4105-AE0F-9BD5DAA198A7}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D930350D-3257-4105-AE0F-9BD5DAA198A7}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{D930350D-3257-4105-AE0F-9BD5DAA198A7}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D930350D-3257-4105-AE0F-9BD5DAA198A7}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">传输指令参数</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential &lt;&lt;eatery&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			下载时段
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>setTimeout</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{E1C8D95D-D1F9-4ac5-91B0-E2A35E2C8D5A}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{E1C8D95D-D1F9-4ac5-91B0-E2A35E2C8D5A}" border="0" />cmd: CommandBase</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{E1C8D95D-D1F9-4ac5-91B0-E2A35E2C8D5A}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E1C8D95D-D1F9-4ac5-91B0-E2A35E2C8D5A}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{E1C8D95D-D1F9-4ac5-91B0-E2A35E2C8D5A}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E1C8D95D-D1F9-4ac5-91B0-E2A35E2C8D5A}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">指令实例</div>
+</td>
+						</tr>
+					</table>
+):bool
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			设置指令超时属性
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private</i><br />
+					<strong>getTarget</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{A7EDCF0A-FDBB-422d-B8B6-2416C3C7B947}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{A7EDCF0A-FDBB-422d-B8B6-2416C3C7B947}" border="0" />dr: DataRow</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A7EDCF0A-FDBB-422d-B8B6-2416C3C7B947}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A7EDCF0A-FDBB-422d-B8B6-2416C3C7B947}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A7EDCF0A-FDBB-422d-B8B6-2416C3C7B947}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A7EDCF0A-FDBB-422d-B8B6-2416C3C7B947}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">数据记录</div>
+</td>
+						</tr>
+					</table>
+):CommiTarget
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			获取数据行的设备目标位置参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="40%" class="TableRow">
+					<i>private static</i><br />
+					<strong>createParam</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{C4D3327C-BD91-4a78-BA4A-DC4DE358B94B}')" style="text-decoration: none; color: #000000;"><img src="../../images/plus03.gif" align="absmiddle" id="param{C4D3327C-BD91-4a78-BA4A-DC4DE358B94B}" border="0" />tag: string</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{C4D3327C-BD91-4a78-BA4A-DC4DE358B94B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C4D3327C-BD91-4a78-BA4A-DC4DE358B94B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{C4D3327C-BD91-4a78-BA4A-DC4DE358B94B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C4D3327C-BD91-4a78-BA4A-DC4DE358B94B}03" style="display: none;">
+							<td width="50"></td>
+							<td><div class="ObjectDetailsNotes">包含参数的tag标记</div>
+</td>
+						</tr>
+					</table>
+):NameObjectList
+				</td>
+				<td width="60%" class="TableRow">
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			根据tag标记创建参数
+		</td>
+	</tr>
+</table></div>
+
+				</td>
+			</tr>
+
+		</table>
+</div>		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA27.htm">TransArg</a></td>
+					<td width="15%" class="TableRow" valign="top">Class</td>
+					<td width="15%" class="TableRow" valign="top">Dependency</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>
